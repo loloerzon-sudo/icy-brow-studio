@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Icy Brow Studio — Natural Microblading in Abu Dhabi</title>
+<meta name="description" content="Phi-certified microblading in Abu Dhabi. Natural, handcrafted hair strokes, personalized brow mapping and premium pigments. Book your appointment today.">
+<!-- IMAGE FOLDER: create /images next to this file and add:
+     logo.png (icy logo) · phibrows.png · artist.png · review.png · before.png · after.png -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--paper:#fbf9f6;--ink:#171512;--muted:#71695f;--line:#e9e2d8;--tint:#f4eee6;
+--gold:#b08968;--gold-d:#96704f;--wa:#1ebe5d;--serif:'Cormorant Garamond',serif;
+--script:'Great Vibes',cursive;--sans:'Jost',sans-serif}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-weight:300;line-height:1.65}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+.kicker{font-family:var(--script);font-size:1.9rem;color:var(--gold)}
+.shead{max-width:640px;margin:0 auto 56px;text-align:center}
+.shead h2{font-size:clamp(32px,4.5vw,46px);margin:6px 0 14px}
+.shead p{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;
+border-radius:999px;border:1px solid var(--ink);background:var(--ink);color:#fff;cursor:pointer;
+font:500 14px var(--sans);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:.25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.14)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.wa{background:var(--wa);border-color:var(--wa)}
+/* NAV */
+.nav{position:fixed;inset:0 0 auto 0;z-index:60;background:rgba(251,249,246,.88);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:.3s}
+.nav.scrolled{border-color:var(--line)}
+.nav .in{max-width:1160px;margin:auto;display:flex;align-items:center;gap:26px;padding:12px 24px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand img{height:48px;width:auto}
+.brand .name{font:500 21px var(--serif);letter-spacing:.02em}
+.links{display:flex;gap:22px;margin-left:auto;align-items:center}
+.links a{text-decoration:none;color:var(--muted);font:400 13px var(--sans);letter-spacing:.1em;text-transform:uppercase}
+.links a:hover{color:var(--ink)}
+.links .btn{padding:11px 20px}
+.burger{display:none;margin-left:auto;background:none;border:0;cursor:pointer;font-size:26px;color:var(--ink)}
+/* HERO */
+.hero{min-height:94svh;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;padding:150px 24px 90px}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 50% 35%,var(--tint),transparent 70%)}
+.hero>*{position:relative}
+.hero .logo{width:min(230px,55vw);margin:0 auto 10px}
+.hero h1{font-size:clamp(42px,7vw,78px)}
+.hero h1 em{font-family:var(--script);font-style:normal;color:var(--gold);font-size:1.1em}
+.hero p.sub{max-width:560px;margin:18px auto 34px;color:var(--muted);font-size:18px}
+.cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:44px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+/* TWO-COL */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.frame{position:relative}
+.frame::after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--gold);border-radius:20px;z-index:-1}
+.frame img{border-radius:20px;width:100%;object-fit:cover;aspect-ratio:4/5;background:var(--tint)}
+.cert{display:flex;align-items:center;gap:16px;margin-top:26px}
+.cert img{height:70px;width:auto}
+.txt h2{font-size:clamp(30px,4vw,42px);margin:6px 0 16px}
+.txt p{color:var(--muted);margin-bottom:14px}
+/* BEFORE/AFTER SLIDER */
+.ba{position:relative;--pos:50%;border-radius:20px;overflow:hidden;aspect-ratio:4/3;background:var(--tint);border:1px solid var(--line)}
+.ba .layer{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:14px;letter-spacing:.15em;text-transform:uppercase}
+.ba .layer img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ba .after{clip-path:inset(0 0 0 var(--pos))}
+.ba .handle{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,.35)}
+.ba .handle::after{content:"⟷";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;font-size:16px;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize}
+.ba .tag{position:absolute;top:14px;z-index:2;background:rgba(23,21,18,.75);color:#fff;border-radius:999px;padding:6px 14px;font-size:11px;letter-spacing:.15em;text-transform:uppercase}
+.ba .tag.l{left:14px}.ba .tag.r{right:14px}
+/* PRICING */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:36px 30px;display:flex;flex-direction:column;gap:12px;position:relative}
+.card.feat{border-color:var(--gold);box-shadow:0 24px 60px rgba(176,137,104,.16)}
+.badge{position:absolute;top:-14px;left:30px;background:var(--gold);color:#fff;border-radius:999px;padding:6px 16px;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.card h3{font-size:26px}
+.card .dur{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.card p{color:var(--muted);font-size:15px;flex:1}
+.price{font-family:var(--serif);font-size:42px;font-weight:600}
+.price .was{font-size:20px;color:var(--muted);text-decoration:line-through;font-weight:400;margin-left:10px}
+/* WHY */
+.why{background:var(--tint)}
+.quote{max-width:820px;margin:0 auto 52px;text-align:center;font:italic 500 clamp(20px,2.6vw,27px)/1.5 var(--serif)}
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.tile{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 22px;text-align:center}
+.tile .ic{font-size:22px;color:var(--gold)}
+.tile h4{font:500 17px var(--sans);margin:10px 0 6px;letter-spacing:.02em}
+.tile p{font-size:14px;color:var(--muted)}
+/* REVIEW */
+.review{display:grid;grid-template-columns:1fr 1.1fr;background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.review img{width:100%;height:100%;object-fit:cover;background:var(--tint)}
+.review .txt{padding:48px}
+.review blockquote{font:italic 500 22px/1.5 var(--serif);margin-bottom:16px}
+.review .who{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+/* FAQ */
+details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:0 24px;margin-bottom:12px}
+summary{cursor:pointer;list:none;display:flex;justify-content:space-between;align-items:center;padding:20px 0;font:500 17px var(--sans)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:22px;color:var(--gold);transition:.25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 20px;color:var(--muted)}
+/* BOOKING */
+.book{display:grid;grid-template-columns:.85fr 1.15fr;gap:52px;align-items:start}
+.binfo .row{display:flex;gap:12px;align-items:center;margin-bottom:14px;color:var(--muted)}
+.binfo .row b{color:var(--ink);font-weight:500}
+form.bform{background:#fff;border:1px solid var(--line);border-radius:20px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field.full{grid-column:1/-1}
+.field label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.field input,.field select,.field textarea{border:1px solid var(--line);border-radius:12px;background:var(--paper);padding:13px 14px;font:300 15px var(--sans);color:var(--ink);outline:none;transition:.2s;width:100%}
+.field :is(input,select,textarea):focus{border-color:var(--gold)}
+.slots{display:flex;flex-wrap:wrap;gap:8px}
+.slot{border:1px solid var(--line);border-radius:999px;background:#fff;padding:9px 16px;font-size:14px;cursor:pointer;transition:.2s}
+.slot.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+#formMsg{grid-column:1/-1;font-size:14px;color:var(--gold-d);min-height:20px}
+/* FOOTER */
+footer{background:var(--ink);color:#cfc9c0;padding:64px 0 32px}
+footer .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
+footer h5{font:500 18px var(--serif);color:#fff;margin-bottom:14px}
+footer a{color:#cfc9c0;text-decoration:none}
+footer a:hover{color:#fff}
+footer .brand .name{color:#fff}
+.legal{border-top:1px solid #3a3731;margin-top:48px;padding-top:24px;font-size:13px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.fab{position:fixed;right:22px;bottom:22px;z-index:70;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.25);transition:.25s}
+.fab:hover{transform:scale(1.07)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:960px){
+ .links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);flex-direction:column;padding:24px;gap:18px;border-bottom:1px solid var(--line)}
+ .nav.open .links{display:flex}
+ .burger{display:block}
+ .two,.book,.review{grid-template-columns:1fr}
+ .cards{grid-template-columns:1fr}
+ form.bform{grid-template-columns:1fr;padding:28px}
+ footer .cols{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="in">
+    <a class="brand" href="#home"><img src="images/logo.png" alt=""><span class="name">Icy Brow Studio</span></a>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+    <nav class="links" id="links">
+      <a href="#about">About</a><a href="#results">Results</a><a href="#pricing">Pricing</a>
+      <a href="#reviews">Reviews</a><a href="#faq">FAQ</a>
+      <a class="btn" href="#book">Book Now</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div>
+    <img class="logo" src="images/logo.png" alt="Icy Brow Studio logo">
+    <h1>Discover Your <em>Perfect</em> Brows</h1>
+    <p class="sub">Natural microblading in Abu Dhabi — stunning, effortless beauty that enhances your own features.</p>
+    <div class="cta">
+      <a class="btn" href="#book">Book an Appointment</a>
+      <a class="btn ghost" href="https://wa.me/971585893789" target="_blank" rel="noopener">WhatsApp Us</a>
+    </div>
+    <div class="chips">
+      <span class="chip">Phi Artist Certified</span><span class="chip">Abu Dhabi</span>
+      <span class="chip">Premium Pigments</span><span class="chip">Natural Results</span>
+    </div>
+  </div>
+</section>
+
+<section id="about"><div class="wrap two">
+  <div class="frame reveal"><img src="images/artist.png" alt="Aiza, microblading artist"></div>
+  <div class="txt reveal">
+    <span class="kicker">welcome to</span><h2>Icy Brow Studio</h2>
+    <p>I am a Phi Artist certified microblading specialist, dedicated to enhancing your natural beauty. With a passion for perfection, I provide personalized services in Abu Dhabi to achieve your dream brows.</p>
+    <p>Every set of brows is carefully designed through precision mapping, advanced techniques, and a commitment to soft, natural‑looking results.</p>
+    <div class="cert"><img src="images/phibrows.png" alt="PhiBrows certification — Aiza Medrano, Artist"></div>
+  </div>
+</div></section>
+
+<section id="results" style="padding-top:0"><div class="wrap">
+  <div class="shead"><span class="kicker">transformations</span><h2>Before &amp; After</h2>
+  <p>Drag the slider to see the transformative power of natural microblading.</p></div>
+  <div class="ba reveal" id="ba">
+    <div class="layer"><span>Before photo</span><img src="images/before.jpg" alt="Before microblading" onerror="this.style.display='none'"></div>
+    <div class="layer after"><span>After photo</span><img src="images/after.jpg" alt="After microblading" onerror="this.style.display='none'"></div>
+    <span class="tag l">Before</span><span class="tag r">After</span>
+    <div class="handle"></div>
+    <input type="range" min="0" max="100" value="50" aria-label="Compare before and after">
+  </div>
+</div></section>
+
+<section id="pricing" style="background:#fff"><div class="wrap">
+  <div class="shead"><span class="kicker">investment</span><h2>Pricing Details</h2>
+  <p>Competitive pricing for natural microblading — from introductory rates to touch‑ups.</p></div>
+  <div class="cards">
+    <div class="card feat reveal"><span class="badge">Introductory Offer</span>
+      <h3>PhiBrows Microblading</h3><span class="dur">3‑hour session</span>
+      <p>Consultation, brow mapping, custom pigment selection, numbing, full procedure and personalized aftercare.</p>
+      <div class="price">AED 588<span class="was">AED 988</span></div>
+      <button class="btn ghost" data-service="PhiBrows Microblading (Intro AED 588)">Book This</button>
+    </div>
+    <div class="card reveal">
+      <h3>Perfecting Touch‑Up</h3><span class="dur">1.5–2 h · 4–8 weeks later</span>
+      <p>Refines healed strokes, reinforces pigment retention and perfects shape, symmetry and density.</p>
+      <div class="price">AED 488</div>
+      <button class="btn ghost" data-service="1-Month Perfecting Touch-Up (AED 488)">Book This</button>
+    </div>
+    <div class="card reveal">
+      <h3>Annual Color Refresh</h3><span class="dur">2–3 h · 1‑year retouch</span>
+      <p>Refreshes color, sharpens hair strokes and restores softness for previously microbladed brows.</p>
+      <div class="price">AED 788</div>
+      <button class="btn ghost" data-service="Annual Color Refresh (AED 788)">Book This</button>
+    </div>
+  </div>
+</div></section>
+
+<section class="why" id="why"><div class="wrap">
+  <p class="quote reveal">“Your brows are not just a beauty treatment — they are part of your identity.”</p>
+  <div class="feat-grid">
+    <div class="tile reveal"><div class="ic">✦</div><h4>Personalized Approach</h4><p>Designed just for you and your face.</p></div>
+    <div class="tile reveal"><div class="ic">✦</div><h4>Premium Pigments</h4><p>Chosen for beautiful, long‑lasting results.</p></div>
+    <div class="tile reveal"><div class="ic">✦</div><h4>Custom Brow Shape</h4><p>Mapped to complement your features.</p></div>
+    <div class="tile reveal"><div class="ic">✦</div><h4>Full Aftercare Guidance</h4><p>Pre‑care &amp; aftercare so brows heal beautifully.</p></div>
+    <div class="tile reveal"><div class="ic">✦</div><h4>Handcrafted Strokes</h4><p>Every stroke with passion and precision.</p></div>
+  </div>
+</div></section>
+
+<section id="reviews"><div class="wrap">
+  <div class="shead"><span class="kicker">client</span><h2>Review</h2></div>
+  <div class="review reveal">
+    <img src="images/review.jpg" alt="Client review on Facebook">
+    <div class="txt">
+      <blockquote>“You deserve brows you'll love waking up to every day. If you're dreaming of microbladed brows that look so natural they blend perfectly with your own, there's only one artist I trust.”</blockquote>
+      <p class="who">Erlyn Concha — verified client</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="faq" style="padding-top:0"><div class="wrap" style="max-width:820px">
+  <div class="shead"><span class="kicker">good to know</span><h2>FAQs</h2></div>
+  <details class="reveal"><summary>Does microblading hurt?</summary><p>A topical numbing cream is applied before and during the procedure. Most clients describe only mild discomfort — many relax completely.</p></details>
+  <details class="reveal"><summary>How long does healing take?</summary><p>Surface healing takes about 7–14 days. The pigment softens and settles into its final shade over 4–6 weeks, which is why the perfecting touch‑up is scheduled 4–8 weeks after your first session.</p></details>
+  <details class="reveal"><summary>How long do results last?</summary><p>Typically 1–2 years depending on skin type, lifestyle and aftercare. An annual color refresh keeps your brows looking soft and defined.</p></details>
+  <details class="reveal"><summary>How should I prepare?</summary><p>Avoid alcohol, caffeine and blood thinners 24 hours before, and skip waxing/tweezing a week prior. Full pre‑care instructions are sent after booking.</p></details>
+</div></section>
+
+<section id="book" style="background:#fff"><div class="wrap book">
+  <div class="binfo reveal">
+    <span class="kicker">contact &amp;</span><h2 style="font-size:clamp(30px,4vw,42px);margin:6px 0 18px">Booking</h2>
+    <p style="color:var(--muted);margin-bottom:26px">Choose your service, pick a date and time, and your request will be sent to us on WhatsApp for confirmation.</p>
+    <div class="row">📍 <b>Abu Dhabi, UAE</b></div>
+    <div class="row">📞 <b>058 589 3789</b></div>
+    <div class="row">✉️ <b>icybrowstudio@gmail.com</b></div>
+    <div class="row">🕙 <b>Tue–Sun · 10:00–20:00</b></div>
+    <div class="cta" style="justify-content:flex-start;margin-top:22px">
+      <a class="btn wa" href="https://wa.me/971585893789" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn ghost" href="https://www.instagram.com/icy.brow.studio" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+  <form class="bform reveal" id="bform" novalidate>
+    <div class="field"><label for="name">Your Name *</label><input id="name" required placeholder="Full name"></div>
+    <div class="field"><label for="phone">Phone / WhatsApp *</label><input id="phone" type="tel" required placeholder="05x xxx xxxx"></div>
+    <div class="field full"><label for="service">Service *</label>
+      <select id="service" required>
+        <option value="">Select a service…</option>
+        <option>PhiBrows Microblading (Intro AED 588)</option>
+        <option>1-Month Perfecting Touch-Up (AED 488)</option>
+        <option>Annual Color Refresh (AED 788)</option>
+      </select></div>
+    <div class="field"><label for="date">Preferred Date *</label><input id="date" type="date" required></div>
+    <div class="field"><label>Preferred Time *</label>
+      <div class="slots" id="slots"></div><input type="hidden" id="time"></div>
+    <div class="field full"><label for="notes">Notes (optional)</label><textarea id="notes" rows="3" placeholder="Anything we should know?"></textarea></div>
+    <p id="formMsg"></p>
+    <div class="field full"><button class="btn" type="submit" style="width:100%">Send Booking via WhatsApp</button></div>
+  </form>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div><a class="brand" href="#home"><img src="images/logo.png" alt="" style="filter:invert(1)"><span class="name">Icy Brow Studio</span></a>
+      <p style="margin-top:14px;font-size:14px">Natural, handcrafted microblading in Abu Dhabi. Phi Artist certified.</p></div>
+    <div><h5>Explore</h5><p><a href="#about">About</a><br><a href="#pricing">Pricing</a><br><a href="#results">Results</a><br><a href="#faq">FAQs</a></p></div>
+    <div><h5>Contact</h5><p>Abu Dhabi, UAE<br><a href="tel:+971585893789">058 589 3789</a><br><a href="mailto:icybrowstudio@gmail.com">icybrowstudio@gmail.com</a></p></div>
+  </div>
+  <div class="legal"><span>© <span id="yr"></span> Icy Brow Studio. All rights reserved.</span>
+  <span><a href="https://www.facebook.com/profile.php?id=61572667387031" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/icy.brow.studio" target="_blank" rel="noopener">Instagram</a></span></div>
+</div></footer>
+
+<a class="fab" href="https://wa.me/971585893789" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.4 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.2-3.6-.8-3-1.2-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 1c.3.2.5.3.6.4.1.2.1.8-.1 1.4Z"/></svg>
+</a>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+$('#yr').textContent=new Date().getFullYear();
+addEventListener('scroll',()=>$('#nav').classList.toggle('scrolled',scrollY>10));
+$('#burger').onclick=()=>$('#nav').classList.toggle('open');
+$$('#links a').forEach(a=>a.onclick=()=>$('#nav').classList.remove('open'));
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&(e.target.classList.add('in'),io.unobserve(e.target))),{threshold:.15});
+$$('.reveal').forEach(el=>io.observe(el));
+/* before/after slider */
+const ba=$('#ba');ba.querySelector('input').addEventListener('input',e=>ba.style.setProperty('--pos',e.target.value+'%'));
+/* time slots */
+const slots=['10:00','11:30','13:00','14:30','16:00','17:30','19:00'];
+$('#slots').innerHTML=slots.map(t=>`<button type="button" class="slot" data-t="${t}">${t}</button>`).join('');
+$$('#slots .slot').forEach(b=>b.onclick=()=>{$$('#slots .slot').forEach(x=>x.classList.remove('on'));b.classList.add('on');$('#time').value=b.dataset.t;});
+/* min date = tomorrow */
+const d=new Date();d.setDate(d.getDate()+1);$('#date').min=d.toISOString().split('T')[0];
+/* pricing buttons preselect service */
+$$('[data-service]').forEach(b=>b.onclick=()=>{$('#service').value=b.dataset.service;location.hash='#book';});
+/* booking -> WhatsApp */
+$('#bform').addEventListener('submit',e=>{
+  e.preventDefault();
+  const g=id=>$(id).value.trim();
+  if(!g('#name')||!g('#phone')||!g('#service')||!g('#date')||!g('#time'))
+    return $('#formMsg').textContent='Please fill in all required fields, including a time slot.';
+  const msg=['Hello Icy Brow Studio! I would like to book an appointment. 💕',
+    'Name: '+g('#name'),'Phone: '+g('#phone'),'Service: '+g('#service'),
+    'Preferred date: '+g('#date'),'Preferred time: '+g('#time'),
+    g('#notes')?'Notes: '+g('#notes'):null].filter(Boolean).join('\n');
+  $('#formMsg').textContent='Opening WhatsApp — press Send to confirm your request.';
+  open('https://wa.me/971585893789?text='+encodeURIComponent(msg),'_blank');
+});
+</script>
+</body>
+</html>
