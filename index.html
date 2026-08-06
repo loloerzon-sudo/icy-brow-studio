@@ -9,7 +9,7 @@
      logo.png (icy logo) · phibrows.png · artist.png · review.png · before.png · after.png -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Jost:wght@300;400;500;600&family=Noto+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--paper:#fbf9f6;--ink:#171512;--muted:#71695f;--line:#e9e2d8;--tint:#f4eee6;
@@ -42,6 +42,8 @@ font:500 14px var(--sans);letter-spacing:.08em;text-transform:uppercase;text-dec
 .links a{text-decoration:none;color:var(--muted);font:400 13px var(--sans);letter-spacing:.1em;text-transform:uppercase}
 .links a:hover{color:var(--ink)}
 .links .btn{padding:11px 20px}
+.lang-toggle{border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--ink);padding:9px 14px;cursor:pointer;font:500 13px var(--sans);transition:.2s}
+.lang-toggle:hover{border-color:var(--gold);color:var(--gold-d)}
 .burger{display:none;margin-left:auto;background:none;border:0;cursor:pointer;font-size:26px;color:var(--ink)}
 /* HERO */
 .hero{min-height:94svh;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;padding:150px 24px 90px}
@@ -168,6 +170,17 @@ footer .brand .name{color:#fff}
 .fab:hover{transform:scale(1.07)}
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
+html[lang="ar"] body{font-family:'Noto Sans Arabic',sans-serif}
+html[lang="ar"] :is(h1,h2,h3,.price,.quote,.studio-quote,.review-copy blockquote){font-family:'Noto Sans Arabic',sans-serif}
+html[lang="ar"] .kicker{font-family:'Noto Sans Arabic',sans-serif;font-size:1.35rem}
+html[dir="rtl"] .links{margin-left:0;margin-right:auto}
+html[dir="rtl"] .burger{margin-left:0;margin-right:auto}
+html[dir="rtl"] .studio-quote{border-left:0;border-right:2px solid var(--gold);padding:4px 20px 4px 0}
+html[dir="rtl"] .review-track{direction:ltr}
+html[dir="rtl"] .review-copy{direction:rtl;text-align:right;align-items:flex-start}
+html[dir="rtl"] .result-pair{direction:ltr}
+html[dir="rtl"] .result-meta,html[dir="rtl"] .binfo,html[dir="rtl"] form.bform{text-align:right}
+html[dir="rtl"] .field{text-align:right}
 @media(max-width:960px){
  .links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);flex-direction:column;padding:24px;gap:18px;border-bottom:1px solid var(--line)}
  .nav.open .links{display:flex}
@@ -193,6 +206,7 @@ footer .brand .name{color:#fff}
     <nav class="links" id="links">
       <a href="#about">About</a><a href="#results">Results</a><a href="#pricing">Pricing</a>
       <a href="#reviews">Reviews</a><a href="#faq">FAQ</a>
+      <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch to Arabic">العربية</button>
       <a class="btn" href="#book">Book Now</a>
     </nav>
   </div>
@@ -410,9 +424,9 @@ footer .brand .name{color:#fff}
     <div class="field full"><label for="service">Service *</label>
       <select id="service" required>
         <option value="">Select a service…</option>
-        <option>PhiBrows Microblading (Intro AED 588)</option>
-        <option>1-Month Perfecting Touch-Up (AED 488)</option>
-        <option>Annual Color Refresh (AED 788)</option>
+        <option value="PhiBrows Microblading (Intro AED 588)">PhiBrows Microblading (Intro AED 588)</option>
+        <option value="1-Month Perfecting Touch-Up (AED 488)">1-Month Perfecting Touch-Up (AED 488)</option>
+        <option value="Annual Color Refresh (AED 788)">Annual Color Refresh (AED 788)</option>
       </select></div>
     <div class="field"><label for="date">Preferred Date *</label><input id="date" type="date" required></div>
     <div class="field"><label>Preferred Time *</label>
@@ -438,6 +452,7 @@ footer .brand .name{color:#fff}
   <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.4 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.2-3.6-.8-3-1.2-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 1c.3.2.5.3.6.4.1.2.1.8-.1 1.4Z"/></svg>
 </a>
 
+<script src="i18n.js"></script>
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 $('#yr').textContent=new Date().getFullYear();
@@ -491,14 +506,33 @@ $('#bform').addEventListener('submit',e=>{
   e.preventDefault();
   const g=id=>$(id).value.trim();
   if(!g('#name')||!g('#phone')||!g('#service')||!g('#date')||!g('#time'))
-    return $('#formMsg').textContent='Please fill in all required fields, including a time slot.';
-  const msg=['Hello Icy Brow Studio! I would like to book an appointment. 💕',
-    'Name: '+g('#name'),'Phone: '+g('#phone'),'Service: '+g('#service'),
+    return $('#formMsg').textContent=IcyI18n.t('Please fill in all required fields, including a time slot.');
+  const isArabic=IcyI18n.language==='ar';
+  const arabicServices={
+    'PhiBrows Microblading (Intro AED 588)':'مايكروبليدنج PhiBrows (عرض تمهيدي 588 درهم)',
+    '1-Month Perfecting Touch-Up (AED 488)':'جلسة تحسين بعد شهر (488 درهم)',
+    'Annual Color Refresh (AED 788)':'تجديد اللون السنوي (788 درهم)'
+  };
+  const service=isArabic?arabicServices[g('#service')]:g('#service');
+  const msg=(isArabic?[
+    'مرحباً Icy Brow Studio! أرغب في حجز موعد. 💕',
+    'الاسم: '+g('#name'),'رقم الهاتف: '+g('#phone'),'الخدمة: '+service,
+    'التاريخ المفضل: '+g('#date'),'الوقت المفضل: '+g('#time'),
+    g('#notes')?'ملاحظات: '+g('#notes'):null
+  ]:[
+    'Hello Icy Brow Studio! I would like to book an appointment. 💕',
+    'Name: '+g('#name'),'Phone: '+g('#phone'),'Service: '+service,
     'Preferred date: '+g('#date'),'Preferred time: '+g('#time'),
-    g('#notes')?'Notes: '+g('#notes'):null].filter(Boolean).join('\n');
-  $('#formMsg').textContent='Opening WhatsApp — press Send to confirm your request.';
+    g('#notes')?'Notes: '+g('#notes'):null
+  ]).filter(Boolean).join('\n');
+  $('#formMsg').textContent=IcyI18n.t('Opening WhatsApp — press Send to confirm your request.');
   open('https://wa.me/971585893789?text='+encodeURIComponent(msg),'_blank');
 });
+IcyI18n.init();
+$('#langToggle').onclick=()=>{
+  IcyI18n.apply(IcyI18n.language==='en'?'ar':'en');
+  $('#nav').classList.remove('open');
+};
 </script>
 </body>
 </html>

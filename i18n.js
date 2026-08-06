@@ -1,0 +1,130 @@
+(() => {
+  const ar = {
+    "About":"من نحن","Results":"النتائج","Pricing":"الأسعار","Reviews":"آراء العميلات","FAQ":"الأسئلة الشائعة","Book Now":"احجزي الآن",
+    "Discover Your":"اكتشفي","Perfect":"حواجبك","Brows":"المثالية",
+    "Natural microblading in Abu Dhabi — stunning, effortless beauty that enhances your own features.":"مايكروبليدنج طبيعي في أبوظبي — جمال أنيق وبسيط يعزز ملامحك الطبيعية.",
+    "Book an Appointment":"احجزي موعداً","WhatsApp Us":"تواصلي عبر واتساب","Phi Artist Certified":"معتمدة من Phi","Abu Dhabi":"أبوظبي","Premium Pigments":"صبغات عالية الجودة","Natural Results":"نتائج طبيعية",
+    "welcome to":"مرحباً بكِ في",
+    "I am a Phi Artist certified microblading specialist, dedicated to enhancing your natural beauty. With a passion for perfection, I provide personalized services in Abu Dhabi to achieve your dream brows.":"أنا أخصائية مايكروبليدنج معتمدة من Phi Artist، أكرّس خبرتي لإبراز جمالك الطبيعي. بشغف نحو الإتقان، أقدّم خدمات مخصصة في أبوظبي لمساعدتك على الحصول على الحواجب التي تحلمين بها.",
+    "Every set of brows is carefully designed through precision mapping, advanced techniques, and a commitment to soft, natural‑looking results.":"يتم تصميم كل حاجب بعناية من خلال القياسات الدقيقة والتقنيات المتقدمة والالتزام بنتائج ناعمة وطبيعية.",
+    "inside the studio":"داخل الاستوديو","A Calm Space for Beautiful Results":"مساحة هادئة لنتائج جميلة",
+    "Step into a private, welcoming studio in Abu Dhabi where every detail has been thoughtfully prepared for your comfort.":"ادخلي إلى استوديو خاص ومريح في أبوظبي، حيث جرى إعداد كل تفصيل بعناية لضمان راحتك.",
+    "From consultation and precision brow mapping to treatment and aftercare, your appointment is personal, unhurried and designed entirely around you.":"من الاستشارة ورسم الحواجب بدقة إلى الجلسة والعناية اللاحقة، تحصلين على موعد شخصي وهادئ مصمم بالكامل من أجلك.",
+    "Private and welcoming setting":"أجواء خاصة ومريحة","Clean, carefully prepared treatment space":"مساحة علاج نظيفة ومجهزة بعناية","Personalized, one-to-one experience":"تجربة شخصية وفردية",
+    "“Your brow appointment should feel as beautiful as the result.”":"«يجب أن تكون تجربة موعد حواجبك جميلة بقدر النتيجة.»","Book Your Visit":"احجزي زيارتك",
+    "transformations":"التحولات","Before & After":"قبل وبعد","Drag the slider to see the transformative power of natural microblading.":"حرّكي شريط المقارنة لرؤية تأثير المايكروبليدنج الطبيعي.",
+    "Before photo":"صورة قبل","After photo":"صورة بعد","Before":"قبل","After":"بعد",
+    "More Client Transformations":"المزيد من تحولات العميلات","Every brow is mapped and designed to complement the client's natural features.":"يتم قياس وتصميم كل حاجب ليتناسق مع ملامح العميلة الطبيعية.",
+    "Natural Definition":"تحديد طبيعي","Softly structured brows tailored to the client's features.":"حواجب محددة بنعومة ومصممة لتناسب ملامح العميلة.",
+    "Refined Shape":"شكل متناسق","Balanced arches with crisp, natural-looking definition.":"أقواس متوازنة بتحديد واضح وطبيعي.",
+    "Fuller Finish":"مظهر أكثر كثافة","Enhanced fullness while preserving a flattering brow shape.":"كثافة محسّنة مع الحفاظ على شكل حاجب جميل ومتناسق.",
+    "investment":"استثمارك في جمالك","Pricing Details":"تفاصيل الأسعار","Competitive pricing for natural microblading — from introductory rates to touch‑ups.":"أسعار مناسبة للمايكروبليدنج الطبيعي، من العرض التمهيدي إلى جلسات التحسين.",
+    "Introductory Offer":"عرض تمهيدي","3‑hour session":"جلسة لمدة 3 ساعات","Consultation, brow mapping, custom pigment selection, numbing, full procedure and personalized aftercare.":"استشارة، ورسم دقيق للحواجب، واختيار صبغة مخصصة، وتخدير موضعي، وإجراء كامل، وإرشادات عناية لاحقة مخصصة.",
+    "Book This":"احجزي هذه الخدمة","Perfecting Touch‑Up":"جلسة تحسين نهائية","1.5–2 h · 4–8 weeks later":"1.5–2 ساعة · بعد 4–8 أسابيع",
+    "Refines healed strokes, reinforces pigment retention and perfects shape, symmetry and density.":"تحسّن الشعيرات بعد الالتئام، وتعزز ثبات الصبغة، وتضبط الشكل والتماثل والكثافة.",
+    "Annual Color Refresh":"تجديد اللون السنوي","2–3 h · 1‑year retouch":"2–3 ساعات · تجديد بعد سنة","Refreshes color, sharpens hair strokes and restores softness for previously microbladed brows.":"ينعش اللون، ويوضح الشعيرات، ويعيد النعومة للحواجب التي سبق عمل المايكروبليدنج لها.",
+    "“Your brows are not just a beauty treatment — they are part of your identity.”":"«حواجبك ليست مجرد إجراء تجميلي، بل هي جزء من هويتك.»",
+    "Personalized Approach":"نهج مخصص","Designed just for you and your face.":"مصمم خصيصاً لكِ ولملامح وجهك.","Chosen for beautiful, long‑lasting results.":"مختارة لنتائج جميلة وطويلة الأمد.",
+    "Custom Brow Shape":"شكل حاجب مخصص","Mapped to complement your features.":"مرسوم ليتناسق مع ملامحك.","Full Aftercare Guidance":"إرشادات عناية كاملة","Pre‑care & aftercare so brows heal beautifully.":"عناية قبل الجلسة وبعدها لالتئام جميل للحواجب.",
+    "Handcrafted Strokes":"شعيرات مرسومة يدوياً","Every stroke with passion and precision.":"كل شعيرة مرسومة بشغف ودقة.",
+    "client love":"محبة العميلات","What Clients Say":"ماذا تقول عميلاتنا","Real messages from clients, translated and lightly shortened for clarity.":"رسائل حقيقية من العميلات، مترجمة ومختصرة قليلاً للوضوح.",
+    "Translated from Tagalog":"مترجم من التاغالوغية","Translated from Cebuano":"مترجم من السيبوانية","Client message":"رسالة من عميلة","Shortened from original":"مختصر من الرسالة الأصلية","View original message":"عرض الرسالة الأصلية",
+    "“My brows are beautiful, Ms. Aiza. You're incredibly talented!”":"«حواجبي جميلة جداً يا آنسة عايزة. أنتِ موهوبة للغاية!»","Jeri — verified client":"جيري — عميلة موثقة",
+    "“I'm so satisfied with the result. Thank you so much again, Ms. Aiza.”":"«أنا راضية جداً عن النتيجة. شكراً جزيلاً مرة أخرى يا آنسة عايزة.»","Latina — verified client":"لاتينا — عميلة موثقة",
+    "“They are perfect! I love them so much.”":"«إنها مثالية! أحببتها كثيراً.»","Beth — verified client":"بيث — عميلة موثقة",
+    "“I was hesitant at first, but Aiza was so patient through consultation, mapping and the entire process. The result is exactly what I wanted—timeless and natural.”":"«كنت مترددة في البداية، لكن عايزة كانت صبورة جداً خلال الاستشارة والرسم وكل مراحل الجلسة. النتيجة هي تماماً ما أردته: طبيعية وأنيقة دائماً.»","Cheska — verified client":"تشيسكا — عميلة موثقة",
+    "“My brows give me a whole new aura. My confidence is so high that I feel I could give an impromptu presentation to anyone!”":"«منحتني حواجبي إطلالة جديدة تماماً. ارتفعت ثقتي بنفسي لدرجة أنني أشعر أنني أستطيع تقديم عرض ارتجالي أمام أي شخص!»",
+    "“Thank you so much, Aiz. I'm super happy with my brows—I don't look 48 anymore!”":"«شكراً جزيلاً يا عايزة. أنا سعيدة جداً بحواجبي، لم أعد أبدو في الثامنة والأربعين!»","Erlyn — verified client":"إرلين — عميلة موثقة",
+    "“Every morning when I do my makeup, I can't help saying how beautiful my brows are. Now I only need cushion, blush and lipstick.”":"«كل صباح أثناء وضع المكياج لا أستطيع إلا أن أقول كم تبدو حواجبي جميلة. الآن لا أحتاج سوى كريم خفيف وأحمر خدود وأحمر شفاه.»",
+    "“I'm truly grateful—it feels like a dream fulfilled. I felt completely at ease with you. It was worth the trust; your work is beautiful.”":"«أنا ممتنة حقاً، أشعر وكأن حلماً قد تحقق. شعرت براحة تامة معكِ. كنتِ جديرة بالثقة وعملك جميل.»","Verified WhatsApp client":"عميلة موثقة عبر واتساب",
+    "good to know":"معلومات مهمة","FAQs":"الأسئلة الشائعة","Does microblading hurt?":"هل المايكروبليدنج مؤلم؟","A topical numbing cream is applied before and during the procedure. Most clients describe only mild discomfort — many relax completely.":"يُوضع كريم تخدير موضعي قبل الإجراء وأثناءه. تصف معظم العميلات الشعور بأنه انزعاج بسيط فقط، وكثيرات يشعرن بالاسترخاء التام.",
+    "How long does healing take?":"كم يستغرق الالتئام؟","Surface healing takes about 7–14 days. The pigment softens and settles into its final shade over 4–6 weeks, which is why the perfecting touch‑up is scheduled 4–8 weeks after your first session.":"يستغرق الالتئام السطحي نحو 7–14 يوماً. يهدأ لون الصبغة ويستقر على درجته النهائية خلال 4–6 أسابيع، ولذلك تُحدد جلسة التحسين بعد 4–8 أسابيع من الجلسة الأولى.",
+    "How long do results last?":"كم تدوم النتائج؟","Typically 1–2 years depending on skin type, lifestyle and aftercare. An annual color refresh keeps your brows looking soft and defined.":"تدوم النتائج عادةً من سنة إلى سنتين حسب نوع البشرة ونمط الحياة والعناية اللاحقة. يساعد تجديد اللون السنوي على إبقاء الحواجب ناعمة ومحددة.",
+    "How should I prepare?":"كيف أستعد للجلسة؟","Avoid alcohol, caffeine and blood thinners 24 hours before, and skip waxing/tweezing a week prior. Full pre‑care instructions are sent after booking.":"تجنبي الكحول والكافيين ومميّعات الدم لمدة 24 ساعة قبل الجلسة، وتجنبي الشمع أو نتف الحواجب لمدة أسبوع. تُرسل تعليمات التحضير كاملة بعد الحجز.",
+    "contact &":"التواصل و","Booking":"الحجز","Choose your service, pick a date and time, and your request will be sent to us on WhatsApp for confirmation.":"اختاري الخدمة والتاريخ والوقت، وسيُرسل طلبك إلينا عبر واتساب للتأكيد.",
+    "Abu Dhabi, UAE":"أبوظبي، الإمارات العربية المتحدة","Tue–Sun · 10:00–20:00":"الثلاثاء–الأحد · 10:00–20:00",
+    "Your Name *":"الاسم *","Phone / WhatsApp *":"الهاتف / واتساب *","Service *":"الخدمة *","Select a service…":"اختاري خدمة…","Preferred Date *":"التاريخ المفضل *","Preferred Time *":"الوقت المفضل *","Notes (optional)":"ملاحظات (اختياري)",
+    "PhiBrows Microblading (Intro AED 588)":"مايكروبليدنج PhiBrows (عرض تمهيدي 588 درهم)","1-Month Perfecting Touch-Up (AED 488)":"جلسة تحسين بعد شهر (488 درهم)","Annual Color Refresh (AED 788)":"تجديد اللون السنوي (788 درهم)","Send Booking via WhatsApp":"إرسال طلب الحجز عبر واتساب",
+    "Natural, handcrafted microblading in Abu Dhabi. Phi Artist certified.":"مايكروبليدنج طبيعي مرسوم يدوياً في أبوظبي، على يد فنانة معتمدة من Phi.","Explore":"استكشفي","Contact":"التواصل","Icy Brow Studio. All rights reserved.":"Icy Brow Studio. جميع الحقوق محفوظة.",
+    "Full name":"الاسم الكامل","Anything we should know?":"هل هناك أي ملاحظات تودين إضافتها؟","Please fill in all required fields, including a time slot.":"يرجى تعبئة جميع الحقول المطلوبة، بما في ذلك الوقت المفضل.","Opening WhatsApp — press Send to confirm your request.":"جارٍ فتح واتساب — يرجى الضغط على إرسال لتأكيد طلبك.","Menu":"القائمة","Studio highlights":"مميزات الاستوديو","Compare before and after":"قارني بين قبل وبعد","Client review carousel":"عارض آراء العميلات","5 out of 5 stars":"5 من 5 نجوم","Choose a review":"اختيار مراجعة","Previous review":"المراجعة السابقة","Next review":"المراجعة التالية","Chat on WhatsApp":"الدردشة عبر واتساب","Switch to Arabic":"التبديل إلى العربية",
+    "Icy Brow Studio logo":"شعار Icy Brow Studio","Aiza, microblading artist":"عايزة، فنانة مايكروبليدنج","PhiBrows certification — Aiza Medrano, Artist":"شهادة PhiBrows — الفنانة عايزة ميدرانو","The bright, elegant treatment space inside Icy Brow Studio":"مساحة العلاج المشرقة والأنيقة داخل Icy Brow Studio","Before microblading":"قبل المايكروبليدنج","After microblading":"بعد المايكروبليدنج",
+    "Client result 1 before microblading":"نتيجة العميلة 1 قبل المايكروبليدنج","Client result 1 after microblading":"نتيجة العميلة 1 بعد المايكروبليدنج","Client result 2 before microblading":"نتيجة العميلة 2 قبل المايكروبليدنج","Client result 2 after microblading":"نتيجة العميلة 2 بعد المايكروبليدنج","Client result 3 before microblading":"نتيجة العميلة 3 قبل المايكروبليدنج","Client result 3 after microblading":"نتيجة العميلة 3 بعد المايكروبليدنج",
+    "WhatsApp message from Jeri praising her brow results":"رسالة واتساب من جيري تشيد بنتيجة حواجبها","WhatsApp message from a satisfied client":"رسالة واتساب من عميلة راضية","WhatsApp message from Beth showing her healed brows":"رسالة واتساب من بيث تعرض حواجبها بعد الالتئام","Detailed client message from Cheska about her microblading experience":"رسالة مفصلة من تشيسكا عن تجربة المايكروبليدنج","WhatsApp message from Jeri describing her confidence boost":"رسالة واتساب من جيري تصف زيادة ثقتها بنفسها","WhatsApp message from Erlyn thanking Aiza for her brows":"رسالة واتساب من إرلين تشكر عايزة على حواجبها","WhatsApp message from Jeri about her simpler makeup routine":"رسالة واتساب من جيري عن روتين مكياجها الأبسط","Client message expressing gratitude and trust in the brow service":"رسالة عميلة تعبر عن امتنانها وثقتها بخدمة الحواجب"
+  };
+
+  const pageMeta = {
+    en: {
+      title: "Icy Brow Studio — Natural Microblading in Abu Dhabi",
+      description: "Phi-certified microblading in Abu Dhabi. Natural, handcrafted hair strokes, personalized brow mapping and premium pigments. Book your appointment today."
+    },
+    ar: {
+      title: "Icy Brow Studio — مايكروبليدنج طبيعي في أبوظبي",
+      description: "مايكروبليدنج معتمد من Phi في أبوظبي، مع شعيرات طبيعية مرسومة يدوياً ورسم حواجب مخصص وصبغات عالية الجودة. احجزي موعدك اليوم."
+    }
+  };
+
+  let language = "en";
+  const textItems = [];
+  const attributeItems = [];
+
+  function translated(value) {
+    if (ar[value]) return ar[value];
+    let match = value.match(/^Review (\d+) of (\d+)$/);
+    if (match) return `المراجعة ${match[1]} من ${match[2]}`;
+    match = value.match(/^Show review (\d+)$/);
+    if (match) return `عرض المراجعة ${match[1]}`;
+    return value;
+  }
+
+  function preserveSpacing(original, replacement) {
+    return original.replace(original.trim(), replacement);
+  }
+
+  function apply(nextLanguage) {
+    language = nextLanguage === "ar" ? "ar" : "en";
+    const arabic = language === "ar";
+    document.documentElement.lang = language;
+    document.documentElement.dir = arabic ? "rtl" : "ltr";
+    textItems.forEach(item => {
+      item.node.nodeValue = arabic ? preserveSpacing(item.original, translated(item.original.trim())) : item.original;
+    });
+    attributeItems.forEach(item => {
+      item.element.setAttribute(item.name, arabic ? translated(item.original) : item.original);
+    });
+    document.title = pageMeta[language].title;
+    const description = document.querySelector('meta[name="description"]');
+    if (description) description.content = pageMeta[language].description;
+    const toggle = document.querySelector("#langToggle");
+    if (toggle) {
+      toggle.textContent = arabic ? "EN" : "العربية";
+      toggle.setAttribute("aria-label", arabic ? "التبديل إلى الإنجليزية" : "Switch to Arabic");
+    }
+    try { localStorage.setItem("icy-language", language); } catch (_) {}
+  }
+
+  function init() {
+    const walker = document.createTreeWalker(document.body, 4);
+    let node;
+    while ((node = walker.nextNode())) {
+      const parent = node.parentElement;
+      if (!parent || parent.matches("script,style")) continue;
+      const value = node.nodeValue.trim();
+      if (value && (ar[value] || /^Review \d+ of \d+$/.test(value) || /^Show review \d+$/.test(value))) {
+        textItems.push({node, original: node.nodeValue});
+      }
+    }
+    document.querySelectorAll("[placeholder],[aria-label],[alt]").forEach(element => {
+      ["placeholder","aria-label","alt"].forEach(name => {
+        const value = element.getAttribute(name);
+        if (value && (ar[value] || /^Review \d+ of \d+$/.test(value) || /^Show review \d+$/.test(value))) {
+          attributeItems.push({element, name, original: value});
+        }
+      });
+    });
+    let saved = "en";
+    try { saved = localStorage.getItem("icy-language") || "en"; } catch (_) {}
+    apply(saved);
+  }
+
+  window.IcyI18n = {init, apply, t: value => language === "ar" ? translated(value) : value, get language(){return language;}};
+})();
