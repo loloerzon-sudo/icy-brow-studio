@@ -83,4 +83,4 @@ For best performance, new photographs should be exported as WebP, consistently c
 - This is a static website with no server-side database.
 - Appointment requests are not stored by the website.
 - Google Fonts requires an internet connection.
-- Client photographs and review screenshots should only be published with appropriate consent.
+- Client photographs and review screenshots should only be published with appropriate consent. 
