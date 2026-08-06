@@ -4,7 +4,7 @@ A responsive, bilingual website for Icy Brow Studio, a private microblading stud
 
 ## Features
 
-- Responsive single-page layout
+- Responsive single-page layout 
 - English and Arabic language selector
 - Right-to-left layout for Arabic
 - Language preference saved in the browser
