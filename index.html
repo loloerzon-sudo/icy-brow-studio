@@ -105,9 +105,23 @@ font:500 14px var(--sans);letter-spacing:.08em;text-transform:uppercase;text-dec
 .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:36px 30px;display:flex;flex-direction:column;gap:12px;position:relative}
 .card.feat{border-color:var(--gold);box-shadow:0 24px 60px rgba(176,137,104,.16)}
 .badge{position:absolute;top:-14px;left:30px;background:var(--gold);color:#fff;border-radius:999px;padding:6px 16px;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.card.premium{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(240px,.55fr);gap:48px;align-items:center;padding:48px;background:linear-gradient(135deg,#171512 0%,#29231d 100%);border-color:#43372c;color:#fff;box-shadow:0 28px 70px rgba(23,21,18,.22);overflow:hidden}
+.card.premium::after{content:"";position:absolute;width:260px;height:260px;border:1px solid rgba(176,137,104,.28);border-radius:50%;right:-80px;top:-120px;box-shadow:0 0 0 36px rgba(176,137,104,.05)}
+.premium .badge{top:18px;background:#d2ae89;color:#171512;z-index:1}
+.premium-copy,.premium-side{position:relative;z-index:1}
+.premium-copy{display:flex;flex-direction:column;gap:12px}
+.premium-copy h3{font-size:clamp(31px,4vw,44px)}
+.premium-copy p{max-width:720px;color:#d8d0c7;font-size:16px}
+.premium-side{display:flex;flex-direction:column;align-items:flex-start;gap:18px;padding-left:34px;border-left:1px solid rgba(255,255,255,.18)}
+.premium .dur{color:#c9b9aa}
+.premium .price{color:#fff;white-space:nowrap}
+.premium .btn{background:#d2ae89;border-color:#d2ae89;color:#171512;width:100%}
+.premium .btn:hover{box-shadow:0 12px 30px rgba(210,174,137,.24)}
 .card h3{font-size:26px}
 .card .dur{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .card p{color:var(--muted);font-size:15px;flex:1}
+.card.premium .dur{color:#c9b9aa}
+.card.premium p{color:#e0d8cf}
 .price{font-family:var(--serif);font-size:42px;font-weight:600}
 .price .was{font-size:20px;color:var(--muted);text-decoration:line-through;font-weight:400;margin-left:10px}
 /* WHY */
@@ -181,6 +195,8 @@ html[dir="rtl"] .review-copy{direction:rtl;text-align:right;align-items:flex-sta
 html[dir="rtl"] .result-pair{direction:ltr}
 html[dir="rtl"] .result-meta,html[dir="rtl"] .binfo,html[dir="rtl"] form.bform{text-align:right}
 html[dir="rtl"] .field{text-align:right}
+html[dir="rtl"] .premium-side{padding-left:0;padding-right:34px;border-left:0;border-right:1px solid rgba(255,255,255,.18)}
+html[dir="rtl"] .premium .badge{left:auto;right:30px}
 @media(max-width:960px){
  .links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);flex-direction:column;padding:24px;gap:18px;border-bottom:1px solid var(--line)}
  .nav.open .links{display:flex}
@@ -192,6 +208,8 @@ html[dir="rtl"] .field{text-align:right}
  .review-proof img{width:auto;max-width:100%;max-height:380px}
  .review-copy{order:-1;padding:34px 28px}
  .cards{grid-template-columns:1fr}
+ .card.premium{grid-column:auto;grid-template-columns:1fr;gap:28px;padding:42px 28px}
+ .premium-side,html[dir="rtl"] .premium-side{padding:24px 0 0;border-left:0;border-right:0;border-top:1px solid rgba(255,255,255,.18)}
  form.bform{grid-template-columns:1fr;padding:28px}
  footer .cols{grid-template-columns:1fr}
 }
@@ -299,7 +317,7 @@ html[dir="rtl"] .field{text-align:right}
 
 <section id="pricing" style="background:#fff"><div class="wrap">
   <div class="shead"><span class="kicker">investment</span><h2>Pricing Details</h2>
-  <p>Competitive pricing for natural microblading — from introductory rates to touch‑ups.</p></div>
+  <p>Choose the brow experience that best matches your goals — from our signature premium service to essential touch‑ups.</p></div>
   <div class="cards">
     <div class="card feat reveal"><span class="badge">Introductory Offer</span>
       <h3>PhiBrows Microblading</h3><span class="dur">3‑hour session</span>
@@ -318,6 +336,17 @@ html[dir="rtl"] .field{text-align:right}
       <p>Refreshes color, sharpens hair strokes and restores softness for previously microbladed brows.</p>
       <div class="price">AED 788</div>
       <button class="btn ghost" data-service="Annual Color Refresh (AED 788)">Book This</button>
+    </div>
+    <div class="card premium reveal"><span class="badge">Signature Service</span>
+      <div class="premium-copy">
+        <h3>Premium Microblading</h3><span class="dur">Our most exclusive brow experience</span>
+        <p>An elevated brow experience with extra precision, customization and attention to detail. Includes a more personalized brow design, refined mapping, premium pigment selection and enhanced finishing for a truly luxurious result.</p>
+        <p>For clients who want an extra level of detail and exclusivity.</p>
+      </div>
+      <div class="premium-side">
+        <div class="price">AED 2,500</div>
+        <button class="btn" data-service="Premium Microblading (AED 2500)">Book Premium</button>
+      </div>
     </div>
   </div>
 </div></section>
@@ -424,6 +453,7 @@ html[dir="rtl"] .field{text-align:right}
     <div class="field full"><label for="service">Service *</label>
       <select id="service" required>
         <option value="">Select a service…</option>
+        <option value="Premium Microblading (AED 2500)">Premium Microblading (AED 2,500)</option>
         <option value="PhiBrows Microblading (Intro AED 588)">PhiBrows Microblading (Intro AED 588)</option>
         <option value="1-Month Perfecting Touch-Up (AED 488)">1-Month Perfecting Touch-Up (AED 488)</option>
         <option value="Annual Color Refresh (AED 788)">Annual Color Refresh (AED 788)</option>
@@ -509,6 +539,7 @@ $('#bform').addEventListener('submit',e=>{
     return $('#formMsg').textContent=IcyI18n.t('Please fill in all required fields, including a time slot.');
   const isArabic=IcyI18n.language==='ar';
   const arabicServices={
+    'Premium Microblading (AED 2500)':'المايكروبليدنج الفاخر (2,500 درهم)',
     'PhiBrows Microblading (Intro AED 588)':'مايكروبليدنج PhiBrows (عرض تمهيدي 588 درهم)',
     '1-Month Perfecting Touch-Up (AED 488)':'جلسة تحسين بعد شهر (488 درهم)',
     'Annual Color Refresh (AED 788)':'تجديد اللون السنوي (788 درهم)'
