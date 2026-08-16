@@ -974,6 +974,9 @@ $('#bform').addEventListener('submit',e=>{
   ]).filter(Boolean).join('\n');
   $('#formMsg').textContent=IcyI18n.t('Opening WhatsApp — press Send to confirm your request.');
   open('https://wa.me/971585893789?text='+encodeURIComponent(msg),'_blank');
+  setTimeout(()=>{
+    window.location.href='thank-you.html';
+  },350);
 });
 IcyI18n.init();
 $('#langToggle').onclick=()=>{

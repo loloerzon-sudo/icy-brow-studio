@@ -64,7 +64,21 @@
     "Watch live hair stroke video in motion":"مشاهدة فيديو رسم الشعيرات الطبيعية",
     "Client result 1 before microblading":"نتيجة العميلة 1 قبل المايكروبليدنج","Client result 1 after microblading":"نتيجة العميلة 1 بعد المايكروبليدنج","Client result 2 before microblading":"نتيجة العميلة 2 قبل المايكروبليدنج","Client result 2 after microblading":"نتيجة العميلة 2 بعد المايكروبليدنج","Client result 3 before microblading":"نتيجة العميلة 3 قبل المايكروبليدنج","Client result 3 after microblading":"نتيجة العميلة 3 بعد المايكروبليدنج",
     "Client result 4 before microblading":"نتيجة العميلة 4 قبل المايكروبليدنج","Client result 4 after microblading":"نتيجة العميلة 4 بعد المايكروبليدنج","Client result 5 before microblading":"نتيجة العميلة 5 قبل المايكروبليدنج","Client result 5 after microblading":"نتيجة العميلة 5 بعد المايكروبليدنج",
-    "WhatsApp message from Jeri praising her brow results":"رسالة واتساب من جيري تشيد بنتيجة حواجبها","WhatsApp message from a satisfied client":"رسالة واتساب من عميلة راضية","WhatsApp message from Beth showing her healed brows":"رسالة واتساب من بيث تعرض حواجبها بعد الالتئام","Detailed client message from Cheska about her microblading experience":"رسالة مفصلة من تشيسكا عن تجربة المايكروبليدنج","WhatsApp message from Jeri describing her confidence boost":"رسالة واتساب من جيري تصف زيادة ثقتها بنفسها","WhatsApp message from Erlyn thanking Aiza for her brows":"رسالة واتساب من إرلين تشكر عايزة على حواجبها","WhatsApp message from Jeri about her simpler makeup routine":"رسالة واتساب من جيري عن روتين مكياجها الأبسط","Client message expressing gratitude and trust in the brow service":"رسالة عميلة تعبر عن امتنانها وثقتها بخدمة الحواجب"
+    "WhatsApp message from Jeri praising her brow results":"رسالة واتساب من جيري تشيد بنتيجة حواجبها","WhatsApp message from a satisfied client":"رسالة واتساب من عميلة راضية","WhatsApp message from Beth showing her healed brows":"رسالة واتساب من بيث تعرض حواجبها بعد الالتئام","Detailed client message from Cheska about her microblading experience":"رسالة مفصلة من تشيسكا عن تجربة المايكروبليدنج","WhatsApp message from Jeri describing her confidence boost":"رسالة واتساب من جيري تصف زيادة ثقتها بنفسها","WhatsApp message from Erlyn thanking Aiza for her brows":"رسالة واتساب من إرلين تشكر عايزة على حواجبها",
+    "WhatsApp message from Jeri about her simpler makeup routine":"رسالة واتساب من جيري عن روتين مكياجها الأبسط","Client message expressing gratitude and trust in the brow service":"رسالة عميلة تعبر عن امتنانها وثقتها بخدمة الحواجب",
+    "Thank you 💕":"شكراً لكِ 💕",
+    "Booking Request Received":"تم استلام طلب الحجز بنجاح",
+    "Your appointment request has been prepared. If WhatsApp did not open automatically on your device, please tap the button below to send your details directly to Aiza.":"تم إعداد طلب موعدك. إذا لم يفتح تطبيق واتساب تلقائياً على جهازك، يرجى الضغط على الزر أدناه لإرسال تفاصيلك مباشرة إلى عايزة.",
+    "Open WhatsApp Chat":"فتح المحادثة على واتساب",
+    "Return to Homepage":"العودة إلى الصفحة الرئيسية",
+    "What Happens Next?":"ماذا يحدث بعد ذلك؟",
+    "1. Appointment Confirmation":"1. تأكيد الموعد",
+    "We will check your requested date and time slot and reply on WhatsApp to confirm your booking.":"سنقوم بمراجعة التاريخ والوقت المطلوبين والرد عليكِ عبر واتساب لتأكيد حجزك.",
+    "2. Custom Mapping & Consultation":"2. الاستشارة ورسم الحواجب المخصص",
+    "During your session, we map your brows to complement your facial features and choose tailored pigments.":"خلال جلستك، نقوم برسم الحواجب بدقة لتتناسق مع ملامح وجهك واختيار الصبغات المناسبة.",
+    "3. Pre-Care Guidelines":"3. إرشادات ما قبل الجلسة",
+    "Avoid caffeine, alcohol, and blood thinners 24 hours prior. Skip waxing or tweezing 7 days before your visit.":"تجنبي الكافيين والكحول ومميّعات الدم قبل 24 ساعة. تجنبي إزالة شعر الحواجب بالشمع أو الملقط لمدة 7 أيام قبل موعدك.",
+    "Home":"الرئيسية"
   };
 
   const pageMeta = {
@@ -75,6 +89,17 @@
     ar: {
       title: "Icy Brow Studio — مايكروبليدنج طبيعي في أبوظبي",
       description: "مايكروبليدنج معتمد من Phi في أبوظبي، مع شعيرات طبيعية مرسومة يدوياً ورسم حواجب مخصص وصبغات عالية الجودة. احجزي موعدك اليوم."
+    }
+  };
+
+  const thankYouMeta = {
+    en: {
+      title: "Thank You — Icy Brow Studio | Booking Request Received",
+      description: "Thank you for choosing Icy Brow Studio. Your booking request has been received. We look forward to welcoming you to our Abu Dhabi studio."
+    },
+    ar: {
+      title: "شكراً لكِ — Icy Brow Studio | تم استلام طلب الحجز",
+      description: "شكراً لاختياركِ Icy Brow Studio. تم استلام طلب الحجز بنجاح. نتطلع للترحيب بكِ في استوديو أبوظبي."
     }
   };
 
@@ -106,9 +131,13 @@
     attributeItems.forEach(item => {
       item.element.setAttribute(item.name, arabic ? translated(item.original) : item.original);
     });
-    document.title = pageMeta[language].title;
-    const description = document.querySelector('meta[name="description"]');
-    if (description) description.content = pageMeta[language].description;
+    const isThankYou = window.location.pathname.includes('thank-you');
+    const currentMeta = isThankYou ? thankYouMeta[language] : pageMeta[language];
+    if (currentMeta) {
+      document.title = currentMeta.title;
+      const description = document.querySelector('meta[name="description"]');
+      if (description) description.content = currentMeta.description;
+    }
     const toggle = document.querySelector("#langToggle");
     if (toggle) {
       toggle.textContent = arabic ? "EN" : "العربية";
