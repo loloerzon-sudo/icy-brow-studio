@@ -78,7 +78,13 @@
     "During your session, we map your brows to complement your facial features and choose tailored pigments.":"خلال جلستك، نقوم برسم الحواجب بدقة لتتناسق مع ملامح وجهك واختيار الصبغات المناسبة.",
     "3. Pre-Care Guidelines":"3. إرشادات ما قبل الجلسة",
     "Avoid caffeine, alcohol, and blood thinners 24 hours prior. Skip waxing or tweezing 7 days before your visit.":"تجنبي الكافيين والكحول ومميّعات الدم قبل 24 ساعة. تجنبي إزالة شعر الحواجب بالشمع أو الملقط لمدة 7 أيام قبل موعدك.",
-    "Home":"الرئيسية"
+    "Home":"الرئيسية",
+    "spread the love 💕":"شاركي التجربة 💕",
+    "Share with a Friend":"شاركي الموقع مع صديقتك",
+    "Know a sister or friend who dreams of perfect, natural brows? Share Icy Brow Studio directly on WhatsApp so they can explore our AED 588 introductory offer.":"هل تعرفين أختاً أو صديقة تحلم بحواجب طبيعية ومثالية؟ شاركي رابط Icy Brow Studio معها عبر واتساب لتكتشف العرض التمهيدي 588 درهم.",
+    "Share on WhatsApp":"مشاركة عبر واتساب",
+    "Scan to view studio on phone":"امسحي الرمز لفتح الموقع على الهاتف",
+    "Icy Brow Studio QR Code":"رمز QR لـ Icy Brow Studio"
   };
 
   const pageMeta = {

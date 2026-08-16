@@ -79,14 +79,39 @@ h1{font-size:clamp(30px,4.5vw,46px);margin-bottom:14px;color:var(--ink)}
 
 /* NEXT STEPS GRID */
 .steps-box{
-  background:var(--tint);border-radius:20px;padding:32px 28px;text-align:left;
+  background:var(--tint);border-radius:22px;padding:32px 28px;text-align:left;
   margin-top:20px;border:1px solid rgba(176,137,104,.2);
 }
 .steps-box h3{font-size:22px;margin-bottom:20px;text-align:center;color:var(--ink)}
 .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.step-item{background:#fff;padding:22px 18px;border-radius:14px;border:1px solid var(--line)}
+.step-item{background:#fff;padding:22px 18px;border-radius:16px;border:1px solid var(--line);box-shadow:0 4px 14px rgba(23,21,18,.02)}
 .step-item h4{font:600 15px var(--sans);margin-bottom:8px;color:var(--ink)}
 .step-item p{color:var(--muted);font-size:13px;line-height:1.55}
+
+/* REFERRAL SHARE & QR BOX */
+.share-box{
+  background:linear-gradient(135deg,#fff 0%,#fcf9f5 100%);
+  border:1px solid rgba(176,137,104,.35);
+  border-radius:24px;padding:34px 30px;margin-top:28px;
+  display:grid;grid-template-columns:170px 1fr;gap:32px;align-items:center;text-align:left;
+  box-shadow:0 16px 44px rgba(176,137,104,.1),0 1px 3px rgba(23,21,18,.02);
+  position:relative;overflow:hidden;
+}
+.share-box::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--gold),#d2ae89,var(--gold));
+}
+.share-qr-col{display:flex;flex-direction:column;align-items:center;gap:10px}
+.share-qr-wrap{
+  background:#fff;padding:12px;border-radius:20px;border:1px solid rgba(176,137,104,.25);
+  box-shadow:0 10px 24px rgba(23,21,18,.05);display:grid;place-items:center;
+}
+.share-qr-wrap img{width:136px;height:136px;border-radius:12px;display:block}
+.share-qr-caption{font-size:11px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;text-align:center;font-weight:500}
+.share-kicker{font-family:var(--script);font-size:1.85rem;color:var(--gold);display:block;margin-bottom:2px}
+.share-content-col h3{font-size:24px;margin-bottom:10px;color:var(--ink)}
+.share-content-col p{color:var(--muted);font-size:14px;line-height:1.6;margin-bottom:20px}
+.share-btn{padding:13px 26px;font-size:12px}
 
 /* STUDIO INFO BAR */
 .info-bar{
@@ -103,14 +128,18 @@ footer a:hover{color:#fff}
 
 /* ARABIC / RTL */
 html[lang="ar"] body{font-family:'Noto Sans Arabic',sans-serif}
-html[lang="ar"] :is(h1,h2,h3,.kicker){font-family:'Noto Sans Arabic',sans-serif}
+html[lang="ar"] :is(h1,h2,h3,.kicker,.share-content-col h3){font-family:'Noto Sans Arabic',sans-serif}
 html[lang="ar"] .kicker{font-size:1.4rem}
+html[lang="ar"] .share-kicker{font-family:'Noto Sans Arabic',sans-serif;font-size:1.2rem}
 html[lang="ar"] .steps-box{text-align:right}
 html[lang="ar"] .step-item{text-align:right}
+html[lang="ar"] .share-box{text-align:right}
 
 @media(max-width:768px){
   .card{padding:36px 20px;border-radius:20px}
   .steps-grid{grid-template-columns:1fr;gap:14px}
+  .share-box{grid-template-columns:1fr;text-align:center;padding:28px 18px;gap:22px}
+  .share-content-col{display:flex;flex-direction:column;align-items:center}
   .info-bar{flex-direction:column;align-items:center;gap:12px}
   footer .wrap{flex-direction:column;text-align:center}
 }
@@ -169,6 +198,25 @@ html[lang="ar"] .step-item{text-align:right}
         </div>
       </div>
 
+      <!-- REFERRAL SHARE & QR BOX -->
+      <div class="share-box">
+        <div class="share-qr-col">
+          <div class="share-qr-wrap">
+            <img src="images/qr-code-branded.png" alt="Icy Brow Studio QR Code" width="136" height="136">
+          </div>
+          <span class="share-qr-caption">Scan to view studio on phone</span>
+        </div>
+        <div class="share-content-col">
+          <span class="share-kicker">spread the love 💕</span>
+          <h3>Share with a Friend</h3>
+          <p>Know a sister or friend who dreams of perfect, natural brows? Share Icy Brow Studio directly on WhatsApp so they can explore our AED 588 introductory offer.</p>
+          <a class="btn wa share-btn" id="shareBtn" href="https://api.whatsapp.com/send?text=Hey!%20I%20just%20booked%20my%20microblading%20at%20Icy%20Brow%20Studio%20in%20Abu%20Dhabi%20%F0%9F%92%95%20Check%20out%20their%20intro%20offer:%20https://icybrowstudio.com/" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.4 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.2-3.6-.8-3-1.2-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 1c.3.2.5.3.6.4.1.2.1.8-.1 1.4Z"/></svg>
+            <span>Share on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
       <div class="info-bar">
         <span>📍 Abu Dhabi, UAE</span>
         <span>📞 <a href="tel:+971585893789" style="color:inherit;text-decoration:none">058 589 3789</a></span>
@@ -189,10 +237,24 @@ html[lang="ar"] .step-item{text-align:right}
 <script src="i18n.js"></script>
 <script>
 document.getElementById('yr').textContent = new Date().getFullYear();
+
+const updateShareLink = () => {
+  const isArabic = window.IcyI18n && IcyI18n.language === 'ar';
+  const shareMsg = isArabic
+    ? 'مرحباً! لقد قمت بحجز موعد مايكروبليدنج في Icy Brow Studio بأبوظبي 💕 شاهدي العرض والنتائج هنا: https://icybrowstudio.com/'
+    : 'Hey! I just booked my microblading at Icy Brow Studio in Abu Dhabi 💕 Check out their intro offer: https://icybrowstudio.com/';
+  const btn = document.getElementById('shareBtn');
+  if (btn) {
+    btn.href = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(shareMsg);
+  }
+};
+
 if (window.IcyI18n) {
   IcyI18n.init();
+  updateShareLink();
   document.getElementById('langToggle').onclick = () => {
     IcyI18n.apply(IcyI18n.language === 'en' ? 'ar' : 'en');
+    updateShareLink();
   };
 }
 </script>
