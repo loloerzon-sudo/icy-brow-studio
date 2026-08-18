@@ -4,33 +4,38 @@ A responsive, bilingual website for Icy Brow Studio, a private microblading stud
 
 ## Features
 
-- Responsive single-page layout
+- Responsive single-page layout with dedicated Thank You page
 - English and Arabic language selector
 - Right-to-left layout for Arabic
 - Language preference saved in the browser
-- Before-and-after comparison slider
-- Client transformation gallery
+- Interactive before-and-after comparison slider
+- Client transformation gallery with zoom lightbox
+- Free Brow Photo Consultation banner (direct WhatsApp photo upload)
 - Studio Experience section
 - Client review carousel with translated summaries
-- Service and pricing cards
+- Service and pricing cards with promotional strikethrough prices
+- Tabby ("Buy Now, Pay Later") 4 interest-free monthly installment integration
 - Frequently asked questions
-- WhatsApp appointment request form
-- Mobile navigation and floating WhatsApp button
-- Lazy-loaded, web-optimized images
+- WhatsApp appointment request form with auto-redirect to thank-you page
+- Mobile navigation drawer and floating WhatsApp button
+- Lazy-loaded, web-optimized images and vector branding
 
 ## Project Structure
 
 ```text
 aiz/
 ├── index.html              Main website, styles, and interactions
+├── thank-you.html          Booking confirmation and referral sharing page
 ├── i18n.js                 English/Arabic translation logic
 ├── README.md               Project documentation
-├── images/
-│   ├── results/            Optimized before-and-after photos
-│   ├── reviews/            Optimized client review screenshots
-│   ├── studio/             Studio interior photograph
-│   └── ...                 Logo, artist, certificate, and other assets
-└── *.jpg                   Original client review screenshots
+├── robots.txt              Search engine crawler directives
+├── sitemap.xml             Search engine sitemap
+└── images/
+    ├── results/            Optimized before-and-after photos & video
+    ├── reviews/            Optimized client review screenshots
+    ├── studio/             Studio interior photograph
+    ├── tabby.svg           Official Tabby vector brand badge
+    └── ...                 Logo, artist, certificate, and other assets
 ```
 
 ## Running Locally

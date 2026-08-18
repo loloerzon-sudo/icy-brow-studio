@@ -42,9 +42,9 @@
       "image": "https://icybrowstudio.com/images/logo.png",
       "telephone": "+971585893789",
       "email": "icybrowstudio@gmail.com",
-      "priceRange": "AED 488 - AED 2,500",
+      "priceRange": "AED 488 - AED 1,288",
       "currenciesAccepted": "AED",
-      "paymentAccepted": "Cash, Bank Transfer",
+      "paymentAccepted": "Cash, Bank Transfer, Credit Card, Tabby (Buy Now Pay Later)",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Abu Dhabi",
@@ -109,7 +109,7 @@
               "name": "Premium Microblading",
               "description": "Our most exclusive brow experience with refined mapping and custom finishing."
             },
-            "price": "2500",
+            "price": "1288",
             "priceCurrency": "AED"
           }
         ]
@@ -271,7 +271,7 @@ section{padding:104px 0;position:relative}
 /* BEFORE/AFTER SLIDER */
 .ba{position:relative;--pos:50%;border-radius:24px;overflow:hidden;aspect-ratio:4/3;background:var(--tint);border:1px solid var(--line);box-shadow:0 20px 50px rgba(23,21,18,.06)}
 .ba .layer{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:14px;letter-spacing:.15em;text-transform:uppercase}
-.ba .layer img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ba .layer img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%}
 .ba .after{clip-path:inset(0 0 0 var(--pos))}
 .ba .handle{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;background:#fff;box-shadow:0 0 14px rgba(0,0,0,.4)}
 .ba .handle::after{content:"⟷";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;font-size:16px;box-shadow:0 8px 20px rgba(0,0,0,.25);border:1px solid rgba(176,137,104,.2)}
@@ -359,7 +359,7 @@ section{padding:104px 0;position:relative}
   box-shadow:0 6px 18px rgba(176,137,104,.35);font-weight:500;
 }
 .card.premium{
-  grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(240px,.55fr);gap:48px;
+  grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(290px,.75fr);gap:40px;
   align-items:center;padding:52px 48px;background:linear-gradient(135deg,#171512 0%,#26201a 100%);
   border-color:rgba(210,174,137,.35);color:#fff;
   box-shadow:0 32px 80px rgba(23,21,18,.26),inset 0 1px 0 rgba(255,255,255,.12);overflow:hidden;
@@ -384,9 +384,9 @@ section{padding:104px 0;position:relative}
 .premium-copy{display:flex;flex-direction:column;gap:14px}
 .premium-copy h3,.card.premium h3{font-size:clamp(32px,4vw,46px);letter-spacing:-.01em;color:#fff}
 .premium-copy p{max-width:720px;color:#d8d0c7;font-size:16px;line-height:1.7}
-.premium-side{display:flex;flex-direction:column;align-items:flex-start;gap:20px;padding-left:38px;border-left:1px solid rgba(255,255,255,.18)}
+.premium-side{display:flex;flex-direction:column;align-items:flex-start;gap:20px;padding-left:36px;border-left:1px solid rgba(255,255,255,.18);width:100%}
 .premium .dur{color:#c9b9aa}
-.premium .price,.card.premium .price{color:#fff;white-space:nowrap}
+.premium .price,.card.premium .price{color:#fff;display:inline-flex;align-items:baseline;flex-wrap:wrap;gap:8px 14px;line-height:1.15}
 .premium .btn{background:#d2ae89;border-color:#d2ae89;color:#171512;width:100%;font-weight:600}
 .premium .btn:hover{box-shadow:0 14px 34px rgba(210,174,137,.3);background:#dfc2a3;border-color:#dfc2a3}
 .card h3{font-size:26px;color:var(--ink)}
@@ -395,8 +395,41 @@ section{padding:104px 0;position:relative}
 .card.premium h3{color:#fff}
 .card.premium .dur{color:#c9b9aa}
 .card.premium p{color:#e0d8cf}
-.price{font-family:var(--serif);font-size:44px;font-weight:600;color:var(--ink)}
-.price .was{font-size:20px;color:var(--muted);text-decoration:line-through;font-weight:400;margin-left:10px}
+.price{font-family:var(--serif);font-size:44px;font-weight:600;color:var(--ink);display:inline-flex;align-items:baseline;flex-wrap:wrap;gap:6px 12px;line-height:1.15}
+.price .was{font-size:20px;color:var(--muted);text-decoration:line-through;font-weight:400;margin-left:0}
+.card.premium .price .was{color:#b3a89b;font-size:22px;margin-left:0}
+
+/* TABBY PAYMENTS */
+.tabby-split{display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:12.5px;color:var(--muted);margin:2px 0 6px;line-height:1.4}
+.tabby-split b{color:var(--ink);font-weight:600}
+.tabby-logo{height:17px;width:auto;vertical-align:middle;display:inline-block;border-radius:3px}
+.tabby-premium{color:#d8d0c7}
+.tabby-premium b{color:#fff}
+.tabby-banner{
+  margin-top:46px;background:linear-gradient(135deg,#fff 0%,#fdfbf7 100%);
+  border:1px solid rgba(62,254,178,.45);border-radius:24px;padding:34px 38px;
+  display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center;
+  box-shadow:0 14px 40px rgba(62,254,178,.08),0 1px 3px rgba(23,21,18,.02);
+  position:relative;overflow:hidden;
+}
+.tabby-banner::before{
+  content:"";position:absolute;inset:-30px -30px auto auto;width:150px;height:150px;
+  background:radial-gradient(circle,rgba(62,254,178,.22),transparent 70%);
+  border-radius:50%;pointer-events:none;
+}
+.tabby-badge-col{display:flex;flex-direction:column;align-items:center;gap:8px}
+.tabby-badge-col img{height:36px;width:auto}
+.tabby-badge-tag{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-d);font-weight:600}
+.tabby-banner-content h4{font:500 24px var(--serif);color:var(--ink);margin-bottom:6px}
+.tabby-banner-content p{color:var(--muted);font-size:14.5px;line-height:1.6;margin-bottom:16px}
+.tabby-perks{display:flex;gap:20px;flex-wrap:wrap}
+.tabby-perk{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--ink);font-weight:500}
+.tabby-perk span{color:var(--gold-d)}
+@media(max-width:768px){
+  .tabby-banner{grid-template-columns:1fr;gap:20px;padding:26px 20px;text-align:center}
+  .tabby-perks{justify-content:center}
+  .tabby-badge-col{flex-direction:row;justify-content:center}
+}
 
 /* WHY */
 .why{background:var(--tint);position:relative}
@@ -439,6 +472,43 @@ summary::-webkit-details-marker{display:none}
 summary::after{content:"+";font-size:22px;color:var(--gold);transition:.25s;font-weight:300}
 details[open] summary::after{transform:rotate(45deg)}
 details p{padding:0 0 22px;color:var(--muted);font-size:15px;line-height:1.65}
+
+/* CONSULTATION */
+.consultation-section{background:linear-gradient(180deg,var(--paper) 0%,var(--tint) 100%);position:relative}
+.consult-card{
+  background:#fff;border:1px solid var(--line);border-radius:28px;padding:52px 48px;
+  box-shadow:0 24px 60px rgba(23,21,18,.05),0 1px 3px rgba(23,21,18,.02);
+  text-align:center;position:relative;overflow:hidden;
+}
+.consult-card::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(176,137,104,.1),transparent 75%);
+  pointer-events:none;
+}
+.consult-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;margin:38px 0 42px;text-align:left}
+.consult-step{
+  background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:26px 22px;
+  display:flex;flex-direction:column;gap:10px;position:relative;
+  transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
+}
+.consult-step:hover{
+  transform:translateY(-3px);border-color:var(--gold);
+  box-shadow:0 14px 34px rgba(176,137,104,.12);
+}
+.consult-num{
+  width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#fff,#f7f2eb);
+  border:1px solid rgba(176,137,104,.3);color:var(--gold-d);font:600 14px var(--sans);
+  display:grid;place-items:center;box-shadow:0 4px 12px rgba(176,137,104,.1);
+}
+.consult-step h4{font:600 17px var(--sans);color:var(--ink);margin-top:4px}
+.consult-step p{font-size:14px;color:var(--muted);line-height:1.55}
+.consult-cta-wrap{display:flex;flex-direction:column;align-items:center;gap:14px}
+.consult-reassurance{font-size:13px;color:var(--gold-d);letter-spacing:.08em;text-transform:uppercase;font-weight:500}
+html[dir="rtl"] .consult-steps{text-align:right}
+@media(max-width:768px){
+  .consult-card{padding:36px 24px}
+  .consult-steps{grid-template-columns:1fr;gap:16px;margin:28px 0 34px}
+}
 
 /* BOOKING */
 .book{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
@@ -489,7 +559,7 @@ html[dir="rtl"] .review-copy{direction:rtl;text-align:right;align-items:flex-sta
 html[dir="rtl"] .result-pair{direction:ltr}
 html[dir="rtl"] .result-meta,html[dir="rtl"] .binfo,html[dir="rtl"] form.bform{text-align:right}
 html[dir="rtl"] .field{text-align:right}
-html[dir="rtl"] .premium-side{padding-left:0;padding-right:34px;border-left:0;border-right:1px solid rgba(255,255,255,.18)}
+html[dir="rtl"] .premium-side{padding-left:0;padding-right:36px;border-left:0;border-right:1px solid rgba(255,255,255,.18)}
 html[dir="rtl"] .premium .badge{left:auto;right:30px}
 @media(max-width:960px){
  .links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);flex-direction:column;padding:24px;gap:18px;border-bottom:1px solid var(--line)}
@@ -581,8 +651,8 @@ html[dir="rtl"] .premium .badge{left:auto;right:30px}
   <div class="shead"><span class="kicker">transformations</span><h2>Before &amp; After</h2>
   <p>Drag the slider to see the transformative power of natural microblading.</p></div>
   <div class="ba reveal" id="ba">
-    <div class="layer"><span>Before photo</span><img src="images/before.jpg" alt="Before microblading" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
-    <div class="layer after"><span>After photo</span><img src="images/after.jpg" alt="After microblading" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
+    <div class="layer"><span>Before photo</span><img src="images/results/client-05-before.jpg" alt="Before microblading with brow mapping" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
+    <div class="layer after"><span>After photo</span><img src="images/results/client-05-after.jpg" alt="After microblading precision hair strokes" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
     <span class="tag l">Before</span><span class="tag r">After</span>
     <div class="handle"></div>
     <input type="range" min="0" max="100" value="50" aria-label="Compare before and after">
@@ -628,10 +698,10 @@ html[dir="rtl"] .premium .badge{left:auto;right:30px}
       <article class="result-card reveal is-hidden" data-index="4">
         <div class="result-pair">
           <span class="result-zoom-tag">🔍 Zoom</span>
-          <figure><img src="images/results/client-05-before.jpg" alt="Client result 5 before microblading" width="1200" height="1500" loading="lazy" decoding="async"><figcaption>Before</figcaption></figure>
-          <figure><img src="images/results/client-05-after.jpg" alt="Client result 5 after microblading" width="1200" height="1500" loading="lazy" decoding="async"><figcaption>After</figcaption></figure>
+          <figure><img src="images/before.jpg" alt="Client before microblading consultation & mapping" width="1200" height="1500" loading="lazy" decoding="async"><figcaption>Before</figcaption></figure>
+          <figure><img src="images/after.jpg" alt="Client after microblading procedure" width="1200" height="1500" loading="lazy" decoding="async"><figcaption>After</figcaption></figure>
         </div>
-        <div class="result-meta"><h4>Precision Hair Strokes</h4><p>Custom brow mapping with delicate stroke density for effortless daily beauty.</p></div>
+        <div class="result-meta"><h4>Custom Brow Mapping</h4><p>Precision mapping and tailored stroke placement for defined, natural arches.</p></div>
       </article>
       <article class="result-card result-video-card reveal is-hidden" data-index="5" data-video="images/results/live-strokes.mp4">
         <div class="result-pair video-pair">
@@ -655,29 +725,49 @@ html[dir="rtl"] .premium .badge{left:auto;right:30px}
       <h3>PhiBrows Microblading</h3><span class="dur">3‑hour session</span>
       <p>Consultation, brow mapping, custom pigment selection, numbing, full procedure and personalized aftercare.</p>
       <div class="price">AED 588<span class="was">AED 988</span></div>
+      <div class="tabby-split">or 4 interest-free payments of <b>AED 147</b> with <img class="tabby-logo" src="images/tabby.svg" alt="Tabby"></div>
       <button class="btn ghost" data-service="PhiBrows Microblading (Intro AED 588)">Book This</button>
     </div>
     <div class="card reveal">
       <h3>Perfecting Touch‑Up</h3><span class="dur">1.5–2 h · 4–8 weeks later</span>
       <p>Refines healed strokes, reinforces pigment retention and perfects shape, symmetry and density.</p>
       <div class="price">AED 488</div>
+      <div class="tabby-split">or 4 interest-free payments of <b>AED 122</b> with <img class="tabby-logo" src="images/tabby.svg" alt="Tabby"></div>
       <button class="btn ghost" data-service="1-Month Perfecting Touch-Up (AED 488)">Book This</button>
     </div>
     <div class="card reveal">
       <h3>Annual Color Refresh</h3><span class="dur">2–3 h · 1‑year retouch</span>
       <p>Refreshes color, sharpens hair strokes and restores softness for previously microbladed brows.</p>
       <div class="price">AED 788</div>
+      <div class="tabby-split">or 4 interest-free payments of <b>AED 197</b> with <img class="tabby-logo" src="images/tabby.svg" alt="Tabby"></div>
       <button class="btn ghost" data-service="Annual Color Refresh (AED 788)">Book This</button>
     </div>
-    <div class="card premium reveal"><span class="badge">Signature Service</span>
+    <div class="card premium reveal"><span class="badge">Signature Service · Limited Time Offer</span>
       <div class="premium-copy">
         <h3>Premium Microblading</h3><span class="dur">Our most exclusive brow experience</span>
         <p>An elevated brow experience with extra precision, customization and attention to detail. Includes a more personalized brow design, refined mapping, premium pigment selection and enhanced finishing for a truly luxurious result.</p>
         <p>For clients who want an extra level of detail and exclusivity.</p>
       </div>
       <div class="premium-side">
-        <div class="price">AED 2,500</div>
-        <button class="btn" data-service="Premium Microblading (AED 2500)">Book Premium</button>
+        <div class="price">AED 1,288<span class="was">AED 2,500</span></div>
+        <div class="tabby-split tabby-premium">or 4 interest-free payments of <b>AED 322</b> with <img class="tabby-logo" src="images/tabby.svg" alt="Tabby"></div>
+        <button class="btn" data-service="Premium Microblading (Promo AED 1288)">Book Premium</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabby-banner reveal">
+    <div class="tabby-badge-col">
+      <img src="images/tabby.svg" alt="Tabby Payment Badge">
+      <span class="tabby-badge-tag">Pay in 4</span>
+    </div>
+    <div class="tabby-banner-content">
+      <h4>Split in 4 Interest-Free Payments with Tabby</h4>
+      <p>Enjoy your dream brows today with complete peace of mind. Split your payment into 4 simple, monthly installments with zero interest and no hidden fees.</p>
+      <div class="tabby-perks">
+        <div class="tabby-perk"><span>✦</span> 0% Interest &amp; No Hidden Fees</div>
+        <div class="tabby-perk"><span>✦</span> Instant Approval at Checkout</div>
+        <div class="tabby-perk"><span>✦</span> Sharia-Compliant &amp; Secure</div>
       </div>
     </div>
   </div>
@@ -766,6 +856,37 @@ html[dir="rtl"] .premium .badge{left:auto;right:30px}
   <details class="reveal"><summary>How should I prepare?</summary><p>Avoid alcohol, caffeine and blood thinners 24 hours before, and skip waxing/tweezing a week prior. Full pre‑care instructions are sent after booking.</p></details>
 </div></section>
 
+<section class="consultation-section" id="consultation" style="padding-top:0"><div class="wrap">
+  <div class="consult-card reveal">
+    <div class="shead" style="margin-bottom:0">
+      <span class="kicker">complimentary guidance</span>
+      <h2>Free Brow Photo Consultation</h2>
+      <p>Not sure which microblading technique suits your face and skin type? Send a clear photo of your natural brows on WhatsApp and receive personalized recommendations directly from Phi Artist Aiza.</p>
+    </div>
+    <div class="consult-steps">
+      <div class="consult-step">
+        <div class="consult-num">1</div>
+        <h4>Snap a Clear Brow Photo</h4>
+        <p>Take a well-lit photo of your natural brows facing the camera (no makeup needed).</p>
+      </div>
+      <div class="consult-step">
+        <div class="consult-num">2</div>
+        <h4>Message Us on WhatsApp</h4>
+        <p>Send your photo directly with any preferences, questions, or brow goals you have.</p>
+      </div>
+      <div class="consult-step">
+        <div class="consult-num">3</div>
+        <h4>Get Personalized Advice</h4>
+        <p>Receive tailored guidance on technique, shape, and pricing before deciding to book.</p>
+      </div>
+    </div>
+    <div class="consult-cta-wrap">
+      <a class="btn wa" href="https://wa.me/971585893789?text=Hello%20Aiza!%20I%20would%20like%20a%20free%20brow%20photo%20assessment.%20Here%20is%20a%20photo%20of%20my%20brows%3A" target="_blank" rel="noopener">Send Brow Photo on WhatsApp</a>
+      <span class="consult-reassurance">✓ 100% Free · No Obligation</span>
+    </div>
+  </div>
+</div></section>
+
 <section id="book" style="background:#fff"><div class="wrap book">
   <div class="binfo reveal">
     <span class="kicker">contact &amp;</span><h2 style="font-size:clamp(30px,4vw,42px);margin:6px 0 18px">Booking</h2>
@@ -774,9 +895,13 @@ html[dir="rtl"] .premium .badge{left:auto;right:30px}
     <div class="row">📞 <b>058 589 3789</b></div>
     <div class="row">✉️ <b>icybrowstudio@gmail.com</b></div>
     <div class="row">🕙 <b>Tue–Sun · 10:00–20:00</b></div>
+    <div class="row">💳 <b>Cash, Card, Transfer, or Tabby (Split in 4)</b></div>
     <div class="cta" style="justify-content:flex-start;margin-top:22px">
       <a class="btn wa" href="https://wa.me/971585893789" target="_blank" rel="noopener">WhatsApp</a>
       <a class="btn ghost" href="https://www.instagram.com/icy.brow.studio" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <div class="row" style="margin-top:22px;padding-top:16px;border-top:1px solid var(--line);font-size:14px">
+      <span>💡 Prefer an assessment first? <a href="https://wa.me/971585893789?text=Hello%20Aiza!%20I%20would%20like%20a%20free%20brow%20photo%20assessment.%20Here%20is%20a%20photo%20of%20my%20brows%3A" target="_blank" rel="noopener" style="color:var(--gold-d);text-decoration:underline;font-weight:500">Send your brow photo for a free consultation ↗</a></span>
     </div>
   </div>
   <form class="bform reveal" id="bform" novalidate>
@@ -785,7 +910,7 @@ html[dir="rtl"] .premium .badge{left:auto;right:30px}
     <div class="field full"><label for="service">Service *</label>
       <select id="service" required>
         <option value="">Select a service…</option>
-        <option value="Premium Microblading (AED 2500)">Premium Microblading (AED 2,500)</option>
+        <option value="Premium Microblading (Promo AED 1288)">Premium Microblading (Promo AED 1,288 · Regular AED 2,500)</option>
         <option value="PhiBrows Microblading (Intro AED 588)">PhiBrows Microblading (Intro AED 588)</option>
         <option value="1-Month Perfecting Touch-Up (AED 488)">1-Month Perfecting Touch-Up (AED 488)</option>
         <option value="Annual Color Refresh (AED 788)">Annual Color Refresh (AED 788)</option>
@@ -1054,7 +1179,7 @@ $('#bform').addEventListener('submit',e=>{
   }
   const isArabic=IcyI18n.language==='ar';
   const arabicServices={
-    'Premium Microblading (AED 2500)':'المايكروبليدنج الفاخر (2,500 درهم)',
+    'Premium Microblading (Promo AED 1288)':'المايكروبليدنج الفاخر (عرض 1,288 درهم · الأصلي 2,500 درهم)',
     'PhiBrows Microblading (Intro AED 588)':'مايكروبليدنج PhiBrows (عرض تمهيدي 588 درهم)',
     '1-Month Perfecting Touch-Up (AED 488)':'جلسة تحسين بعد شهر (488 درهم)',
     'Annual Color Refresh (AED 788)':'تجديد اللون السنوي (788 درهم)'
