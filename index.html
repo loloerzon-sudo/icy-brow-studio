@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#fbf9f6">
-<title>Icy Brow Studio — Natural Microblading in Abu Dhabi</title>
+<title>Icy Brow Studio — Personalized Natural Microblading in Abu Dhabi</title>
 <meta name="description" content="Phi-certified microblading in Abu Dhabi. Natural, handcrafted hair strokes, personalized brow mapping and premium pigments. Book your appointment today.">
 <link rel="icon" type="image/png" href="images/logo.png">
 <link rel="apple-touch-icon" href="images/logo.png">
@@ -14,14 +14,14 @@
 <meta property="og:type" content="business.business">
 <meta property="og:site_name" content="Icy Brow Studio">
 <meta property="og:url" content="https://icybrowstudio.com/">
-<meta property="og:title" content="Icy Brow Studio — Natural Microblading in Abu Dhabi">
+<meta property="og:title" content="Icy Brow Studio — Personalized Natural Microblading in Abu Dhabi">
 <meta property="og:description" content="Phi-certified microblading in Abu Dhabi. Natural, handcrafted hair strokes, personalized brow mapping and premium pigments.">
 <meta property="og:image" content="https://icybrowstudio.com/images/artist.png">
 <meta property="og:locale" content="en_AE">
 <meta property="og:locale:alternate" content="ar_AE">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Icy Brow Studio — Natural Microblading in Abu Dhabi">
+<meta name="twitter:title" content="Icy Brow Studio — Personalized Natural Microblading in Abu Dhabi">
 <meta name="twitter:description" content="Phi-certified microblading in Abu Dhabi. Natural, handcrafted hair strokes, personalized brow mapping and premium pigments.">
 <meta name="twitter:image" content="https://icybrowstudio.com/images/artist.png">
 <!-- Geo Tags (Abu Dhabi) -->
@@ -505,10 +505,54 @@ details p{padding:0 0 22px;color:var(--muted);font-size:15px;line-height:1.65}
 .consult-cta-wrap{display:flex;flex-direction:column;align-items:center;gap:14px}
 .consult-reassurance{font-size:13px;color:var(--gold-d);letter-spacing:.08em;text-transform:uppercase;font-weight:500}
 html[dir="rtl"] .consult-steps{text-align:right}
+
+/* HEALING STAGES */
+.healing-card{
+  margin-top:44px;background:#fff;border:1px solid var(--line);border-radius:26px;
+  padding:42px 38px;box-shadow:0 18px 48px rgba(23,21,18,.04);text-align:center;
+}
+.healing-header h3{font:500 26px var(--serif);color:var(--ink);margin:4px 0 8px}
+.healing-header p{color:var(--muted);font-size:14.5px;max-width:600px;margin:0 auto 32px;line-height:1.6}
+.healing-timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;text-align:left}
+.healing-step{
+  background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 18px;
+  display:flex;flex-direction:column;gap:8px;transition:transform .25s ease,border-color .25s ease;
+}
+.healing-step:hover{transform:translateY(-3px);border-color:var(--gold)}
+.healing-badge{
+  display:inline-block;align-self:flex-start;background:var(--ink);color:#fff;
+  font:600 11px var(--sans);letter-spacing:.08em;text-transform:uppercase;
+  padding:4px 10px;border-radius:999px;
+}
+.healing-step h4{font:600 15px var(--sans);color:var(--ink);margin-top:4px}
+.healing-step p{font-size:13px;color:var(--muted);line-height:1.55}
+
+/* INSTAGRAM SECTION */
+.insta-section{background:var(--paper);padding:24px 0 60px}
+.insta-card{
+  background:linear-gradient(135deg,#fff 0%,#fbf8f3 100%);
+  border:1px solid var(--line);border-radius:24px;padding:36px 40px;
+  display:flex;align-items:center;justify-content:space-between;gap:28px;
+  box-shadow:0 16px 44px rgba(23,21,18,.04);
+}
+.insta-icon{font-size:32px;width:60px;height:60px;border-radius:20px;background:rgba(176,137,104,.1);display:grid;place-items:center;flex-shrink:0}
+.insta-text{flex:1}
+.insta-text h3{font:500 24px var(--serif);color:var(--ink);margin:3px 0 6px}
+.insta-text p{color:var(--muted);font-size:14.5px;line-height:1.6}
+.insta-btn{flex-shrink:0;padding:14px 26px;font-size:13px}
+
 @media(max-width:768px){
   .consult-card{padding:36px 24px}
   .consult-steps{grid-template-columns:1fr;gap:16px;margin:28px 0 34px}
+  .healing-card{padding:32px 20px}
+  .healing-timeline{grid-template-columns:1fr;gap:14px}
+  .insta-card{flex-direction:column;text-align:center;padding:32px 22px;gap:20px}
+  .healing-badge{align-self:center}
+  .healing-step{text-align:center}
 }
+html[dir="rtl"] .healing-timeline{text-align:right}
+html[dir="rtl"] .healing-badge{align-self:flex-start}
+html[dir="rtl"] .insta-text{text-align:right}
 
 /* BOOKING */
 .book{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
@@ -598,7 +642,7 @@ html[dir="rtl"] .premium .badge{left:auto;right:30px}
   <div>
     <img class="logo" src="images/logo.png" alt="Icy Brow Studio logo">
     <h1>Discover Your <em>Perfect</em> Brows</h1>
-    <p class="sub">Natural microblading in Abu Dhabi — stunning, effortless beauty that enhances your own features.</p>
+    <p class="sub">Personalized Natural Microblading in Abu Dhabi — stunning, effortless beauty that enhances your own features.</p>
     <div class="cta">
       <a class="btn" href="#book">Book an Appointment</a>
       <a class="btn ghost" href="https://wa.me/971585893789" target="_blank" rel="noopener">WhatsApp Us</a>
@@ -606,6 +650,7 @@ html[dir="rtl"] .premium .badge{left:auto;right:30px}
     <div class="chips">
       <a class="chip phi-chip" href="https://cert.phi-academy.com/map?member=21a7662b-9a9f-4dc5-a41a-f325a4f88978" target="_blank" rel="noopener" aria-label="Verify Phi Artist Certification on Phi Academy Official Map">✓ Phi Artist Certified ↗</a>
       <span class="chip">Abu Dhabi</span>
+      <span class="chip">Split in 4 with Tabby</span>
       <span class="chip">Premium Pigments</span><span class="chip">Natural Results</span>
     </div>
   </div>
@@ -854,6 +899,36 @@ html[dir="rtl"] .premium .badge{left:auto;right:30px}
   <details class="reveal"><summary>How long does healing take?</summary><p>Surface healing takes about 7–14 days. The pigment softens and settles into its final shade over 4–6 weeks, which is why the perfecting touch‑up is scheduled 4–8 weeks after your first session.</p></details>
   <details class="reveal"><summary>How long do results last?</summary><p>Typically 1–2 years depending on skin type, lifestyle and aftercare. An annual color refresh keeps your brows looking soft and defined.</p></details>
   <details class="reveal"><summary>How should I prepare?</summary><p>Avoid alcohol, caffeine and blood thinners 24 hours before, and skip waxing/tweezing a week prior. Full pre‑care instructions are sent after booking.</p></details>
+
+  <div class="healing-card reveal">
+    <div class="healing-header">
+      <span class="kicker">healing journey</span>
+      <h3>What to Expect While Healing</h3>
+      <p>Understanding the natural 4-stage healing process gives you complete confidence from day one.</p>
+    </div>
+    <div class="healing-timeline">
+      <div class="healing-step">
+        <div class="healing-badge">Days 1–3</div>
+        <h4>Crisp &amp; Defined</h4>
+        <p>Brows look sharp and slightly bolder in color as fresh pigment settles into the skin.</p>
+      </div>
+      <div class="healing-step">
+        <div class="healing-badge">Days 4–7</div>
+        <h4>Gentle Flaking</h4>
+        <p>Light, natural skin flaking begins. Keep brows clean and follow aftercare balms.</p>
+      </div>
+      <div class="healing-step">
+        <div class="healing-badge">Days 8–14</div>
+        <h4>Soft "Ghosting"</h4>
+        <p>Color temporarily appears lighter as fresh epidermal skin regenerates over the pigment.</p>
+      </div>
+      <div class="healing-step">
+        <div class="healing-badge">Weeks 4–6</div>
+        <h4>True Healed Color</h4>
+        <p>True natural shade and stroke definition blossom — ready for your perfecting touch-up.</p>
+      </div>
+    </div>
+  </div>
 </div></section>
 
 <section class="consultation-section" id="consultation" style="padding-top:0"><div class="wrap">
@@ -922,6 +997,18 @@ html[dir="rtl"] .premium .badge{left:auto;right:30px}
     <p id="formMsg"></p>
     <div class="field full"><button class="btn" type="submit" style="width:100%">Send Booking via WhatsApp</button></div>
   </form>
+</div></section>
+
+<section class="insta-section" id="instagram"><div class="wrap">
+  <div class="insta-card reveal">
+    <div class="insta-icon">📷</div>
+    <div class="insta-text">
+      <span class="kicker">connect &amp; follow</span>
+      <h3>Follow Us on Instagram</h3>
+      <p>Discover daily brow transformations, fresh healed results, behind-the-scenes artistry, and studio stories in Abu Dhabi.</p>
+    </div>
+    <a class="btn ghost insta-btn" href="https://www.instagram.com/icy.brow.studio" target="_blank" rel="noopener">@icy.brow.studio ↗</a>
+  </div>
 </div></section>
 
 <footer><div class="wrap">

@@ -2,6 +2,7 @@
   const ar = {
     "About":"من نحن","Results":"النتائج","Pricing":"الأسعار","Reviews":"آراء العميلات","FAQ":"الأسئلة الشائعة","Book Now":"احجزي الآن",
     "Discover Your":"اكتشفي","Perfect":"حواجبك","Brows":"المثالية",
+    "Personalized Natural Microblading in Abu Dhabi — stunning, effortless beauty that enhances your own features.":"مايكروبليدنج طبيعي مخصص في أبوظبي — جمال أنيق وبسيط يعزز ملامحك الطبيعية.",
     "Natural microblading in Abu Dhabi — stunning, effortless beauty that enhances your own features.":"مايكروبليدنج طبيعي في أبوظبي — جمال أنيق وبسيط يعزز ملامحك الطبيعية.",
     "Book an Appointment":"احجزي موعداً","WhatsApp Us":"تواصلي عبر واتساب","Phi Artist Certified":"معتمدة من Phi","Abu Dhabi":"أبوظبي","Premium Pigments":"صبغات عالية الجودة","Natural Results":"نتائج طبيعية",
     "welcome to":"مرحباً بكِ في",
@@ -58,6 +59,16 @@
     "How long does healing take?":"كم يستغرق الالتئام؟","Surface healing takes about 7–14 days. The pigment softens and settles into its final shade over 4–6 weeks, which is why the perfecting touch‑up is scheduled 4–8 weeks after your first session.":"يستغرق الالتئام السطحي نحو 7–14 يوماً. يهدأ لون الصبغة ويستقر على درجته النهائية خلال 4–6 أسابيع، ولذلك تُحدد جلسة التحسين بعد 4–8 أسابيع من الجلسة الأولى.",
     "How long do results last?":"كم تدوم النتائج؟","Typically 1–2 years depending on skin type, lifestyle and aftercare. An annual color refresh keeps your brows looking soft and defined.":"تدوم النتائج عادةً من سنة إلى سنتين حسب نوع البشرة ونمط الحياة والعناية اللاحقة. يساعد تجديد اللون السنوي على إبقاء الحواجب ناعمة ومحددة.",
     "How should I prepare?":"كيف أستعد للجلسة؟","Avoid alcohol, caffeine and blood thinners 24 hours before, and skip waxing/tweezing a week prior. Full pre‑care instructions are sent after booking.":"تجنبي الكحول والكافيين ومميّعات الدم لمدة 24 ساعة قبل الجلسة، وتجنبي الشمع أو نتف الحواجب لمدة أسبوع. تُرسل تعليمات التحضير كاملة بعد الحجز.",
+    "Split in 4 with Tabby":"تقسيط على 4 مع تابي",
+    "healing journey":"رحلة الالتئام","What to Expect While Healing":"ماذا تتوقعين خلال فترة الالتئام",
+    "Understanding the natural 4-stage healing process gives you complete confidence from day one.":"فهم مراحل الالتئام الأربع الطبيعية يمنحك راحة وثقة كاملة منذ اليوم الأول.",
+    "Days 1–3":"الأيام 1–3","Crisp & Defined":"محددة وواضحة","Brows look sharp and slightly bolder in color as fresh pigment settles into the skin.":"تبدو الحواجب محددة وبلون أغمق قليلاً مع استقرار الصبغة في البشرة.",
+    "Days 4–7":"الأيام 4–7","Gentle Flaking":"تقشير خفيف طبيعي","Light, natural skin flaking begins. Keep brows clean and follow aftercare balms.":"يبدأ تقشير سطحي خفيف وطبيعي. حافظي على نظافة الحواجب واستخدمي مرهم العناية.",
+    "Days 8–14":"الأيام 8–14","Soft \"Ghosting\"":"مرحلة التلاشي المؤقت","Color temporarily appears lighter as fresh epidermal skin regenerates over the pigment.":"يظهر اللون فاتحاً بشكل مؤقت بسبب تجدد طبقة الجلد السطحية فوق الصبغة.",
+    "Weeks 4–6":"الأسابيع 4–6","True Healed Color":"اللون النهائي المستقر","True natural shade and stroke definition blossom — ready for your perfecting touch-up.":"تظهر الدرجة الطبيعية الحقيقية وتفاصيل الشعيرات — جاهزة لجلسة التحسين النهائي.",
+    "connect & follow":"تواصلي وتابعينا","Follow Us on Instagram":"تابعينا على إنستغرام",
+    "Discover daily brow transformations, fresh healed results, behind-the-scenes artistry, and studio stories in Abu Dhabi.":"استكشفي تحولات الحواجب اليومية، والنتائج بعد الالتئام، وكواليس العمل ويوميات الاستوديو في أبوظبي.",
+    "@icy.brow.studio ↗":"@icy.brow.studio ↗",
     "contact &":"التواصل و","Booking":"الحجز","Choose your service, pick a date and time, and your request will be sent to us on WhatsApp for confirmation.":"اختاري الخدمة والتاريخ والوقت، وسيُرسل طلبك إلينا عبر واتساب للتأكيد.",
     "Abu Dhabi, UAE":"أبوظبي، الإمارات العربية المتحدة","Tue–Sun · 10:00–20:00":"الثلاثاء–الأحد · 10:00–20:00",
     "Your Name *":"الاسم *","Phone / WhatsApp *":"الهاتف / واتساب *","Service *":"الخدمة *","Select a service…":"اختاري خدمة…","Preferred Date *":"التاريخ المفضل *","Preferred Time *":"الوقت المفضل *","Notes (optional)":"ملاحظات (اختياري)",
@@ -108,11 +119,11 @@
 
   const pageMeta = {
     en: {
-      title: "Icy Brow Studio — Natural Microblading in Abu Dhabi",
+      title: "Icy Brow Studio — Personalized Natural Microblading in Abu Dhabi",
       description: "Phi-certified microblading in Abu Dhabi. Natural, handcrafted hair strokes, personalized brow mapping and premium pigments. Book your appointment today."
     },
     ar: {
-      title: "Icy Brow Studio — مايكروبليدنج طبيعي في أبوظبي",
+      title: "Icy Brow Studio — مايكروبليدنج طبيعي مخصص في أبوظبي",
       description: "مايكروبليدنج معتمد من Phi في أبوظبي، مع شعيرات طبيعية مرسومة يدوياً ورسم حواجب مخصص وصبغات عالية الجودة. احجزي موعدك اليوم."
     }
   };
